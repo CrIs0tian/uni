@@ -1,0 +1,7 @@
+lung([], 0).
+lung([_|T],L):-
+	lung(T,N),
+	N>= 0,
+	L is N+1. 
+	 
+	

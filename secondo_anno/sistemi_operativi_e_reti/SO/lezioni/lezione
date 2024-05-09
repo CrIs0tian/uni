@@ -1,0 +1,28 @@
+LEZIONE 23 NOV 2023
+
+RITORNO SU PAGINAZIONE, PROBLEMI DI PAGINAZIONE, ALGORITMI ETC. 
+
+CONDIVISIONE DELLE PAGINE. 
+          / spazi in d-space (spazio dati) e i-space(istruzioni), con l'i-space condiviso tra processi diversi ma il d-space è diverso per ogni processo. 
+
+          UTILITÀ condivisione dati: 
+                1) quando creato processo figlio, dove dopo una fork, i 2 processi condividono tutto( con dati e pagine read only), ma quando il clone scrive sulla pagina condivisa 
+                viene generata una trap dove la pagina viene clonata. (copy on write). Bisogna fare attenzione con le tempistiche, durante una trap un processo può creare una marea di page ault
+
+                2) librerie condivise, utili in fase di compilazione, dove pagine dove le librerie sono allocate, vengono messe in un area resa accessibile da altre applicazioni( evitiamo copy on write)
+                , ma presenta problemi di indirizzamento
+                3) file 'mappati' in memoria, diviso in apgine mappate e letti o toccato in modo altrenativo per evitare di allocare blocchi (anche grandi) di file in memoria principale
+                
+IMPLEMENTAZIONE MEMORIA VIRTUALE 
+        problema complesso soprattutto per struttura del processo da gestire (crezione di processo, esecuzione, kill), quindi le gestione della memoria non deve influenzare influenzare
+        'ciclo ' di vita del processo. 
+        per capire, vediamo routine di page fault: 
+              1) trap nel kernel in qualsiasi miss page, controllo del sistema op, eviene slavato il contatore del programma e le informazioni del programma nei registi della cpu. 
+              2) avvia servizio dell'interrupt, salvate le inforamzioni e registri volatili
+              3) identificazione pagina necessaria
+              4) verific validitò indirizzo e protezione 
+              5) rilascio frame libero,
+              6) caricamento pagina necessaria, durante il caricamento il prcesso in page fault sfrattato ed evnetualemnte verrà riallocato.
+              e cosi via..
+
+              e tutto questo viene fatto per centinaia di volte 

@@ -1,0 +1,47 @@
+ GESTIONE MEMORIA
+
+
+i programmi sono sempre più complessi, articolati, quindi occupano sempre più memoria ----> esempio obsolescenza programmata
+
+
+per oggi parleremo della memoria RAM per quanto rihguarda la gestioen dello spazio dei programmi. Il nostro desiderio è di rendere la memoria:
+	-privata ---> un processo non deve scrivere leggere su dati di altri processi
+	-grande
+	-basso costo
+	-veloce
+	-persistente
+
+
+abbiamo visto prima che la memoria è una gerarchia : piu vicina to cpu--> piu veloce ( ma piu piccola), e il sistem. po serve per 1) gestire l'astrazione della gerarchia 2) gestire la memoria per i processi (punti di prima)
+
+
+argomenti di oggi: 
+	-astrazione memoria
+	-memoria virtuale
+	-astrazione memoria = pagine , problemi di gestione delle pagine (occupazione,allocazione etc.)
+	- gestione della progettazione delle pagine 
+	
+1) ASTRAZIONE 
+	Metodo più semplice, niente astrazione --> vecchi computer, il processo vedeva la memoria fisica(registri , puntatori, etc.), ma fall subito con l'introduzione di più processi (race condition).
+		erano organizzati in tre modelli:
+			1) os caricato in area ram ( sola lettura), il resto occupati per il resto 
+			2) driver in rom + os in ram + user program (bios esempio di implementazione in memoria fisica del computer) 
+		Attuavano un approccio naive ( ingenuo) , 
+		
+	cosa fare? spazio di indirzzi---> inseme unico di indirizzi per ogni programma, reindirizzandola nell'indirizzo giusto (senza intralciare gli altri) 
+	con utilizzo di due registri: registro base (dove inizi), registro limite(limite dell'indirizzo) 
+	buono ma costa risorse
+
+	in processi i possono essere  tanti processi e alcuni occupano tanta memoria, come li gestisce il sist. op.? con due tecniche , swapping ( per la prima) e memoria virtuale(per la seconda). 
+	SWAPPING if ram completa, un processo pu+ essere swappato (scambiato) in memoria non volatile, ma questa non potrebbe ritoranre perchè lo spazio non è buono (frammentazione), si usa la 		 0deframmentazione 
+	SPAZIO VUOTO (VEDERE TECNICHE DI DEFRAMMENTAZIONE, BITMAP E LISTE, E SCHEMI DI ALLOCAZIONE MEMORIA, E CAP 10.4 DEL LIBRO, ALLOCAZIONE MEMORIA BUDDY ALLOCATION)
+	
+	
+	MEMORIA VIRTUALE estesione dell'ideo di registro base e limite, ad ogni processo viene allocato uno spazio suddiviso in pagine che comportano in una area della memoria riferita al processo.
+	
+	da vedere (slide e libro) 
+	
+	
+
+
+

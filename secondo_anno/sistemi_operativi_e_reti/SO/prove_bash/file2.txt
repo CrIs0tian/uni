@@ -1,0 +1,62 @@
+  169  wget http://sag.art.uniroma2.it/didattica/croce/foo.txt
+  170  ls 
+  171  wget http://www.informatica.uniroma2.it/
+  172  ls 
+  173  cat index.html 
+  174  cat foo.txt 
+  175  cat foo.txt | tail -n 2
+  176  mv foo.txt foo.tsv
+  177  ls  *tsv
+  178  cp foo.tsv foo2.csv
+  179  ls *csv
+  180  mv foo2.csv foo2.tsv
+  181  ls *tsv
+  182  man cd
+  183  cat foo2.tsv | tail -n 2 | head -n 1
+  184  wc foo2.tsv 
+  185  cat foo2.tsv | tail -n 2 | head -n 1 | wc 
+  186  cat foo2.tsv | awk "{print $3}"
+  187  cat foo2.tsv | awk '{print $3}'
+  188  cat foo2.tsv | awk '{print $3}' | sort unic -c
+  189  cat foo2.tsv | awk '{print $3}' | sort uniq -c
+  190  cat foo2.tsv | awk '{print $3}' | sort | uniq -c
+  191  cat foo2.tsv | awk '{print $3}' | sort | uniq 
+  192  en$tuff     JUNE    2021
+  193  robots  APRIL   2023
+  194  cat     JUNE    2023
+  195  dog     JANUARY 2023
+  196  no_three_cols
+  197  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}'
+  198  2023
+  199  2022
+  200  2023
+  201  2022
+  202  2023
+  203  2022
+  204  2021
+  205  2023
+  206  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}' | sort unic -c
+  207  sort: open failed: unic: No such file or directory
+  208  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}' | sort uniq -c
+  209  sort: open failed: uniq: No such file or directory
+  210  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}' | sort | uniq -c
+  211  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}' | sort | uniq
+  212  2021
+  213  2022
+  214  2023
+  215  cristian@cristian_pc:~$en$tuff     JUNE    2021
+  216  robots  APRIL   2023
+  217  cat     JUNE    2023
+  218  dog     JANUARY 2023
+  219  no_three_cols
+  220  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}'
+  221  2023
+  222  cat foo2.tsv | awk '{print $3}' | sort | uniq -c
+  223  cat foo2.tsv | awk '{print $3}' | sort | uniq -c > log_stndout.txt
+  224  cat log_stndout.txt 
+  225  cat foo2.tsv | awk '{print $3}' | sort | uniq -c 2> log_stderr.txt
+  226  history
+  227  history > file.txt
+  228  cat file.txt 
+  229  history | awk '{if($1>168) print}'  
+  230  history | awk '{if($1>168) print}'  > file2.txt

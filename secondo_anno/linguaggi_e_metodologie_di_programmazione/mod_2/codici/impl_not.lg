@@ -1,0 +1,19 @@
+f(a). 
+f(b). 
+
+g(a). 
+g(b). 
+g(j). 
+k(a).
+p(A):- 
+	f(A), 
+	write('10: '), write(A),nl, 
+	g(A), 
+	write('13: '), write(A), nl,
+	k(A).
+	
+	
+mynot(Predicato):- 
+	Predicato,!,fail.
+
+mynot(_).

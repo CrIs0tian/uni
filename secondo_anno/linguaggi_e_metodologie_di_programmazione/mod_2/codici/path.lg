@@ -1,0 +1,17 @@
+e(a,b).
+e(b,c). 
+e(c,d).
+e(a,e). 
+e(e,f).
+e(f,c). 
+e(f,k). 
+
+path(X,Y):-
+ 	e(X,Y). 
+ 	
+
+path(X,Y):-
+	e(X,Z),
+	path(Z,Y). 
+
+

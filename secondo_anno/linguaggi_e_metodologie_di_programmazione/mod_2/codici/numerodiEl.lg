@@ -1,0 +1,9 @@
+ 
+numerodiEl([], El, 0).
+numerodiEl([El|T], El, N):-
+	numerodiEl(T, El, M),
+	M >=0, 
+	N is M + 1.
+numerodiEl([_|T], El, N):-
+	numerodiEl(T, El, M),
+	N is M.

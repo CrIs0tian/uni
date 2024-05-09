@@ -1,0 +1,16 @@
+/* riprendendo il problema della torre di hanoi, notiamo come l'insieme degli spostamenti possano essere raprresentati come un grafo con nodo la configurazione dello stato
+delle torri, e l'arco come una possibile transizione
+
+come posso rappresentare i nodi e gli archi.*/
+sorted([]).
+sorted([_]).
+sorted([X,Y|T]):- 
+	X>Y, 
+	sorted([Y|T]).
+	
+	
+	
+/*per casa: implementare il cubo di rubik
+	
+ 
+

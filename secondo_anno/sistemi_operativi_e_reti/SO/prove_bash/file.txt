@@ -1,0 +1,227 @@
+    1  pwd
+    2  cd
+    3  lst
+    4  lts
+    5  ls
+    6  lt
+    7  sudo apt update && sudo apt upgrade
+    8  pwd
+    9  -i
+   10  i
+   11  bash
+   12  help
+   13  info bash
+   14  ls
+   15  cd..
+   16  pwd
+   17  cd..
+   18  ps
+   19  ls
+   20  pwd
+   21  code.
+   22  code 
+   23  pws
+   24  pwd
+   25  cd..
+   26  cd .
+   27  pwdd
+   28  pwd
+   29  ls
+   30  cd ..
+   31  cd..
+   32  cd ..
+   33  pwd
+   34  cd ..
+   35  ped
+   36  pwd
+   37  ls
+   38  cd home
+   39  pwdd
+   40  pwd
+   41  cd home/cristian
+   42  pwd
+   43  ls
+   44  cd cristian 
+   45  cd ..
+   46  cd mnt
+   47  cd wsl
+   48  cd ..
+   49  cd wsl
+   50  cd ..
+   51  cd c
+   52  cd ..
+   53  cd.
+   54  cd ..
+   55  pwd 
+   56  cd ..
+   57  ls
+   58  ps
+   59  pid fork()
+   60  pid fork 
+   61  fork
+   62  ps
+   63  ls
+   64  cd bin
+   65  cd vin/
+   66  cd bin/
+   67  cd .vscode-server/
+   68  cd bin
+   69  cd ..
+   70  pwd 
+   71  ps 
+   72  15 fork()
+   73  15 fork
+   74  fork 
+   75  time
+   76  ps
+   77  pwd 
+   78  ls
+   79  open (dio mio, w)
+   80  open(dio_mio, w)
+   81  ps
+   82  ls
+   83  open
+   84  sudo apt install xdg_utils
+   85  pwd 
+   86  cd ..
+   87  ls 
+   88  gcc prova.c 
+   89  .\a.out
+   90  ./a.out
+   91  gcc prova.c
+   92  gcc prova.c 
+   93  ./a.out 
+   94  sudo apt install gcc
+   95  gcc --version
+   96  wich gcc
+   97  which gcc
+   98  gcc -- version
+   99  apt-get update
+  100  gcc -- version
+  101  sudo apt install gcc
+  102  --fix-missing
+  103  fix-missing
+  104  sudo apt-get update && sudo apt-get upgrade
+  105  gcc -- version
+  106  gcc --version
+  107  sudo apt install gcc
+  108  gcc --version
+  109  swk
+  110  awk
+  111  cat
+  112  pwd
+  113  head
+  114  cat
+  115  echo $PATH
+  116  printev
+  117  printenv
+  118  foo=5
+  119  printenv
+  120  foo = "this is a new variable"
+  121  foo=9
+  122  printenv
+  123  set
+  124  shazam
+  125  whoami
+  126  hostname
+  127  echo 'sborro'
+  128  echo $HOME
+  129  echo my login is $(whoami)
+  130  date
+  131  cal
+  132  sudo apt install ncal
+  133  cal
+  134  cal -j 3 1999
+  135  date -u
+  136  history
+  137  date --help
+  138  help
+  139  ls 
+  140  pwd 
+  141  cd prova
+  142  cd ..
+  143  ls 
+  144  cd home 
+  145  cd cristian 
+  146  gcc prova.c 
+  147  a.out
+  148  ./a.out 
+  149  awk
+  150  cat
+  151  shaza,
+  152  shazam
+  153  whoami
+  154  pwd 
+  155  cat dio mio.txt
+  156  cat dio\ mio.txt 
+  157  cd prova/
+  158  cat countdown.c
+  159  cd..
+  160  cd ..
+  161  man
+  162  man man
+  163  pwd
+  164  cd ..
+  165  cd cristian 
+  166  cd 
+  167  cd ..
+  168  cd 
+  169  wget http://sag.art.uniroma2.it/didattica/croce/foo.txt
+  170  ls 
+  171  wget http://www.informatica.uniroma2.it/
+  172  ls 
+  173  cat index.html 
+  174  cat foo.txt 
+  175  cat foo.txt | tail -n 2
+  176  mv foo.txt foo.tsv
+  177  ls  *tsv
+  178  cp foo.tsv foo2.csv
+  179  ls *csv
+  180  mv foo2.csv foo2.tsv
+  181  ls *tsv
+  182  man cd
+  183  cat foo2.tsv | tail -n 2 | head -n 1
+  184  wc foo2.tsv 
+  185  cat foo2.tsv | tail -n 2 | head -n 1 | wc 
+  186  cat foo2.tsv | awk "{print $3}"
+  187  cat foo2.tsv | awk '{print $3}'
+  188  cat foo2.tsv | awk '{print $3}' | sort unic -c
+  189  cat foo2.tsv | awk '{print $3}' | sort uniq -c
+  190  cat foo2.tsv | awk '{print $3}' | sort | uniq -c
+  191  cat foo2.tsv | awk '{print $3}' | sort | uniq 
+  192  en$tuff     JUNE    2021
+  193  robots  APRIL   2023
+  194  cat     JUNE    2023
+  195  dog     JANUARY 2023
+  196  no_three_cols
+  197  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}'
+  198  2023
+  199  2022
+  200  2023
+  201  2022
+  202  2023
+  203  2022
+  204  2021
+  205  2023
+  206  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}' | sort unic -c
+  207  sort: open failed: unic: No such file or directory
+  208  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}' | sort uniq -c
+  209  sort: open failed: uniq: No such file or directory
+  210  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}' | sort | uniq -c
+  211  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}' | sort | uniq
+  212  2021
+  213  2022
+  214  2023
+  215  cristian@cristian_pc:~$en$tuff     JUNE    2021
+  216  robots  APRIL   2023
+  217  cat     JUNE    2023
+  218  dog     JANUARY 2023
+  219  no_three_cols
+  220  cristian@cristian_pc:~$ cat foo2.tsv | awk '{print $3}'
+  221  2023
+  222  cat foo2.tsv | awk '{print $3}' | sort | uniq -c
+  223  cat foo2.tsv | awk '{print $3}' | sort | uniq -c > log_stndout.txt
+  224  cat log_stndout.txt 
+  225  cat foo2.tsv | awk '{print $3}' | sort | uniq -c 2> log_stderr.txt
+  226  history
+  227  history > file.txt

@@ -1,0 +1,13 @@
+MEMORIA VIRTUALE 	
+
+
+come detto prima: estensione del concetto di registro base e limite. Dove ogni processo ha uno spazio di indirizzo suddiviso inpagine ( serie di indirizzi conitgui): di solito in pezzi da 4kb, e vegono tradotti in pagine fisiche, con la pagina virtuale che punta alla pagina allocata fisicamente sulla memoria (quindi i frame possono essere di meno rispetto alle pagine, dato che alcune non sono allocate (il processo non ah chiesto il suo indirizzo). 
+
+come avviene questa traduzione? grazie a sist. op. con il supporto dell'hardware. 
+quando viene allocata una pagina per la prima volta si attua un page fault: il sistema prende un frame raramente usato enl disco ( algiritmi per sost. page piu avanti), e il sist.op prende carico del nuovo indirizzo (tutto questo avviene a livello kernel durante il trap eseguito al sit.op.). 
+
+coem viene organizzata quindi questa mmu? nell'indirizzo di una cella di memoria viene organizzata con: 12 bit meno significativi usato per spostarmi nei 4kb messi a disposizione (la signola pagina), gli ultimi 4 bit vengono usati come mapping per lindirizzo fisico. quindi i 4 bit sono come indice della tabella delle pagine (dove l'elemento nell'indice corrisponde al prefisso dellindirizzo della memoria fisica). Ogni 
+processo ha la sua tabella personale, ma con sistemi a 64 bit ogni processo ha possibilmente miliardi di indirizzi da sfuttare per la memoria.
+
+
+	

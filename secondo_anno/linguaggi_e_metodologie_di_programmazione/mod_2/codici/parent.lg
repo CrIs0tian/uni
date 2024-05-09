@@ -1,0 +1,6 @@
+parent(anne, bill).
+parent(anne, charlie).
+parent(bill, donnie).
+grandparent(X,Y):-
+		parent(X,Z),
+		parent(Z,Y).

@@ -1,0 +1,39 @@
+/* precedenza degli operatori, come vengono deiniti? possimao definirli come numeri, dove il loro confronto ( se uno è piu piccolo dell'altro) determina la sua precedenza.
+utile per definire NUOVI OPERATORI, cosi da unificare la forma defissa(2+3), in forma prefissa (+(2,3)). 
+	
+	sintassi nuovo operatore 
+
+:- op(priorità = num,(fx, xfx, xfy, yfx)= livello di priorità, con xfy l'albero con radice f ha valore <= di f, x il contrario, nome). 
+
+esercizio: 1) definire operazione somma, che deve comportarsi come +. 
+*/
+
+
+/*:-op(300, XfY, somma).*/
+
+/* 2) date le seguenti frasi: 
+	-mario ha la amcchina di dario. 
+	- giovanni ha panino. 
+	- elena ha panino di giovanni.
+    obb: fare query: chi ha cosa?. definendo ha e di come operatori. 
+definizioni operazioni. 
+*/
+:-op(300,xfy,ha). 
+:-op(200,xfy,di). 
+mario ha macchina. 
+giovanni ha panino. 
+elena ha panino di giovanni.
+giacomo ha borsa di pelle di daino. 	
+/* ma dobbiamo applicare un contesto per evitare ambiguità,
+  vediamo come esempio di frase 'giovanni ha borsa di pelle di nonna', ovviamente dobbiamo cercare di modificare altrimenti diciamo che nonna è na borsa. 
+*/
+gennaro ha (borsa di pelle) di nonna. 
+
+/* ora vediamo altri predicati, uno di questi è 
+	var(X) dove dice se X è unificato o no , true = X non unificato, false = X è unificato. 
+	nonvar(X), stessa cosa di var(X) ma con valori opposti.
+  utile per predicati dove dobbiamo controllare se 
+  
+  esercizio per casa : implementare il problema delle 8 regine in prolog, 
+ */ 	
+	

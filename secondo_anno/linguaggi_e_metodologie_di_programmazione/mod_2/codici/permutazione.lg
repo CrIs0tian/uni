@@ -1,0 +1,13 @@
+permutazione([],[]).
+permutazione([H|T],B):- 
+	member(H, B). 
+	premutazione(T, PT), 
+	
+	subtract(H, B, PT). 
+subtract(_, [],[]). 
+subtract(H, [H|R], R).	
+subtract(H, [A|R1], [A|R2]):-
+	subtract(H, R1, R2). 
+	
+	
+	

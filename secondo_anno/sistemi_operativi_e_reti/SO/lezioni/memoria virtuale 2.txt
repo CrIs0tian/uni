@@ -1,0 +1,33 @@
+gestione memoria principale macchian (seguito lezioni scorse)
+
+
+argomenti visti prima: organizzazione bisogno di memoria, metodi per spostare dati sul disco(swapping). 
+
+algoritmi per soluzione lru: ALGORITMO NTU (NOT FREQUENTLY USED)
+                            -un 'contatore' per contare la frequenza di uso di una pagina (molto utilizzata, minore possibilita di rimozione momentanea).
+                            ma non conta delle frequenze passate (una pagina viene utilizzata molto per un po' poi non viene più utilizzata, e non viene riusata). 
+                            Vogliamo mantenere le due caratterisctiche, quindi usiamo il concetto di 'aging': per ogni pagina vengono riservati 8 bit, ad ogni accesso viene 
+                            fatto uno shift verso sinistra di 1 (esempio da 00000000, un accesso diventa 10000000), quando non viene acceduta si spostano gli uno a destra 
+                            (da 10000000 a 01000000), e viene riutilizzata quella con il numero più basso ( in questo caso più passa il tempo più una pagina che prima veniva utilizzata il suo numero
+                            si 'svuota' gradualmente). Con questo garantisco frequenza, e riutilizzo efficiente di pagine. 8 bit sono sufficienti per un compromesso tra efficienza e precisione.
+
+WORKING SET: insieme delle pagine usate attualmente in un processo. tot pagine referenziate al processo in esecuzione, quindi avvengono inizialmente più page fault in contmporanea. 
+            ALGORITMO WORKING SET (non sentito tutto). 
+
+riepilogo algoritmi (di sostituzione pagine) visti: - alg ottimale ( non implementabile, ma utile per valutazione e confronto)
+                           - lru
+                           - nru 
+                           - fifo
+                           - second chance 
+                           - clock
+                           - nfu        )
+                           - aging      )   fatti oggi a lezione
+                           - worink SET )
+                           - wsclock    )
+
+PROBLEMI DI PROGETTAZZIONE DI SISTEMI DI PAGINAZIONE 
+                     (anche qui mi sono mezzo perso sono un pollo)
+                     1) alocazione a livello globale vs locale: differenza di libertà di allocazione 
+                              locale: posso allocare pagine solo appartenenti allo spazio del processo 
+                              globale: posso allocare pagine anche di processi diversi rispetto a quello che ha chiesto memoria 
+                              vantaggi allocazione globali: più adattabili alle esigenze, si adeguano ai efficienza up quando working set varia nel tempo 

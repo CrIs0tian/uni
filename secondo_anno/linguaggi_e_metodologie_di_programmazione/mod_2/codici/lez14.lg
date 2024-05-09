@@ -1,0 +1,20 @@
+/*ricerca del percorso in un grafo, riapprofondimento, dove studieremo la ricerca in ampiezza (BFS)*/
+
+/*arche sempre come scritti nelle scorse lezioni*/
+
+/*visita DFS*/ 
+path(X, Y, [X,Y]):- 
+    e(X,Y). 
+path(X,Y,[X|P_Z_Y]):- 
+    e(X,Z), 
+    path(Z,Y,P_Z_Y).
+/*estendere per non far visitare un nodo già visitato, ESERCIZIO*/ 
+/*implementazione BFS*/
+pf([],[]). /* pf = prossima frontiera*/
+pf([X|R], F):- 
+    setof(z, e(X, Z), R_x), 
+    append(R_x, RF, F), 
+    pf(R, R_f).
+opf(f, FR, Y):- 
+    Pf(F, FR), 
+    member(Y, FR).

@@ -1,0 +1,5 @@
+rivoltata([],[]).
+rivoltata([H|T],RL):-
+	append(RT, [H], RL), 
+	rivoltata(T, RT).
+

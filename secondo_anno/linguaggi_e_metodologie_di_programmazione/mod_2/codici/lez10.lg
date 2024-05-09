@@ -1,0 +1,19 @@
+/*creare predicato foglia(T,L), dove T è un albero e L è una foglia.*/
+
+/*definiamo il concetto di albero*/
+t(R, Children).
+folgia(t(R,[]), R):-!.
+/*R =radice, Children = figli*/
+foglia(t(R,A), L):- 
+	member(B,A), 
+	foglia(B,L).
+	
+/*per quanto riguarda L, L è una foglia se è un children ma non è la radice di altri children*/
+
+/*predicato nodo*/
+nodo(t(R,A), N):- 
+	
+	
+	
+
+

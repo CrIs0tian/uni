@@ -1,0 +1,66 @@
+  317  tint
+  318  ps u
+  319  ps
+  320  ps u
+  321  cd prova/
+  322  less countdown.c
+  323  gcc countdown.c
+  324  ./a.out 
+  325  ps u
+  326  ps su
+  327  ps
+  328  ./a.out 
+  329  ps u
+  330  ./a.out 
+  331  ./a.out &
+  332  ls
+  333  ps
+  334  ./countdown
+  335  ps u
+  336  ls
+  337  ps
+  338  ./a.out &
+  339  kill33
+  340  kill 733
+  341  ps
+  342  ls
+  343  cat countdown.sh
+  344  bash countdown.sh 20
+  345  ls lrt
+  346  ls lrtl
+  347  ls man
+  348  man ls
+  349  nohup bash countdown.sh 
+  350  nohup ./a.out 
+  351  history
+  352  man chmod
+  353  ./a.out 
+  354  bg
+  355  ./a.out 
+  356  fg
+  357  vim ./a.out 
+  358  fg
+  359  ps
+  360  kill 881
+  361  ps
+  362  kill 881
+  363  fg
+  364  man vim
+  365  vim countdown.sh
+  366  sudo snap install tetris-thefenriswolf
+  367  sudo service snapd start
+  368  sudo apt-get isntall snapd
+  369  sudo apt update
+  370  sudo apt install snapd
+  371  sudo snap isntall hello-world
+  372  sudo snap install hello-world
+  373  service snapd star
+  374  service snapd start
+  375  sudo apt-get install snapd
+  376  service snapd start
+  377  snapd
+  378  snap
+  379  sudo snap install tetris-thefenriswolf
+  380  systemctl status snapd.service
+  381  history
+  382  history | awk '{if ($1 >316) print }' > log_history_2.txt

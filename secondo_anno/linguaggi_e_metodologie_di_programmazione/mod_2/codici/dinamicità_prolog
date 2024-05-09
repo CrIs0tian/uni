@@ -1,0 +1,1 @@
+assert(lung([], 0)). 

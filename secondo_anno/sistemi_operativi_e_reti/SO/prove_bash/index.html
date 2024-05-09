@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Pietro Frasca
+Name       : Informatica
+Version    : 1.0
+Released   : 06022013\
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>Informatica</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/iframe.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.dropotron-1.2.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		$('#menu > ul').dropotron({
+			mode: 'fade',
+			globalOffsetY: 11,
+			offsetY: -15
+		});
+		
+	});
+</script>
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>INFORMATICA <i style="color:red; font-size:32px;">&nbsp;TRIENNALE</i></h1>
+			
+		</div>
+		<div id="slogan">
+			<h2>Universit&agrave; degli studi di Roma <i style="font-weight:normal;">"Tor Vergata"</i></h2>
+		</div>
+	</div>
+	
+	<div id="menu">
+		<ul>
+			<li class="first"><a href="index.htm">Home</a></li>
+			<li>
+				<span class="opener">Informazioni<b></b></span>
+				<ul>
+					<li><a href="pages/trien/info/contatti.htm" target="mainFrame">Contatti</a></li>
+					<li><a href="pages/trien/info/regolamentoLaureaTriennale.htm"  target="mainFrame">Regolamento</a></li>
+					<li><a href="pages/trien/info/depliant informatica v2014 v2.pdf"  target="_blank">Studiare Informatica</a></li>
+				</ul>
+				
+			</li>
+			<li>
+				<span class="opener">Didattica <b></b></span>
+				<ul>
+					<li><a href="/f0?fid=220&srv=4&cdl=0&os=0"  target="mainFrame">Insegnamenti</a></li>
+					<li><a href="pages/trien/orario/orario.htm"  target="mainFrame">Orario lezioni</a></li>
+					<li>
+						<span>Date esami<b></b></span>
+						<ul>
+							<li><a href="pages/trien/esami/dateEsami0.htm" target="mainFrame">Sessione invernale</a></li>
+							<li><a href="pages/trien/esami/dateEsami1.htm" target="mainFrame">Sessione estiva anticipata</a></li>
+							<li><a href="pages/trien/esami/dateEsami3.htm" target="mainFrame">Sessione estiva</a></li>
+							<li><a href="pages/trien/esami/dateEsami5.htm" target="mainFrame">Sessione autunnale</a></li>
+						</ul>
+					</li>
+					<!-- <li><a href="pages/trien/strut/struttura.htm" target="mainFrame">Programmazione didattica</a></li> -->
+					<li><a href="pages/trien/lauree/dateLauree.htm" target="mainFrame">Lauree</a></li>
+					<li><a href="pages/trien/pstudio/pianiStudio.htm" target="mainFrame">Piani di studio</a></li>
+					<li><a href="pages/trien/crediti/crediti.htm" target="mainFrame">Crediti D/F</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<span class="opener" style="font-size: 15px;">
+					<a href="/f0?fid=30&srv=4&cdl=0" target="mainFrame">Docenti</a>
+				</span>
+			</li>
+			<li>
+				<span class="opener">Studenti<b></b></span>
+				<ul>
+					<li><a href="pages/trien/iscriz/iscrizioni.htm"  target="mainFrame">Iscrizioni</a></li>
+					<li><a href="pages/trien/regol/debitoform.htm"  target="mainFrame">Debito formativo</a></li>
+					<li><a href="pages/trien/trasf/trasferimenti.htm"  target="mainFrame">Trasferimenti</a></li>
+					<li><a href="pages/trien/tutor/tutoring.htm" target="mainFrame">Tutoring</a></li>
+					<li><a href="pages/com/erasmus/erasmus.htm" target="mainFrame">Erasmus</a></li>
+					<li><a href="pages/com/stage/stage.htm"  target="mainFrame">Stage e tirocini</a></li>
+					<li><a href="http://delphi.uniroma2.it/totem/jsp/homeStudenti.jsp?language=IT" target="_blank">Delphi</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<span class="opener" style="font-size:15px">
+					
+					<!-- <a href="http://www.laureamagistraleinformatica.uniroma2.it/" style="color:orange">Magistrale</a> -->
+				
+					<a href="/index2.htm" style="color:orange">Magistrale</a> 
+				</span>
+			</li>
+			<li class="last">
+				<span class="opener" style="font-size: 15px;">
+					<a href="/f1?fid=1&os=0&cdl=0"  target="mainFrame" style="color:red" title="Servizio riservato ai docenti">Login</a>
+				</span>
+			</li>
+		</ul>
+		<br class="clearfix" />
+	</div>
+	
+	<div id="page">
+		<div id="content"> 
+			<div class="box"> 
+			<!--
+				<iframe id="myframe" name="mainFrame" src="home.htm"  
+				scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" 
+				style="overflow:auto; width:100%; display:none">
+				</iframe>
+			-->
+			<iframe id="mainFrame" name="mainFrame" src="home.htm"  scrolling="no"  frameborder="0" style="border:0px; overflow:hidden; width:100%; display:none">
+				</iframe>
+			
+			
+			
+			
+			</div>
+		</div>
+	</div>
+	<br class="clearfix" />
+ 
+	
+	<div id="footer">
+		 Design by Pietro Frasca, copyright © 2013-2014. All rights reserved. 
+	</div>
+</div>
+</body>
+</html>

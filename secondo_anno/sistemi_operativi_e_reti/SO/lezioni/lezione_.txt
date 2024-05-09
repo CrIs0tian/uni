@@ -1,0 +1,22 @@
+LEZIONE OGGI: FILE SYSTEM
+
+ram: memoria veloce, ma limitata e volatile, abbiamo bisogno di una memoria non volatile che alloca dati persistenti e condivisibili ( in maniera efficiente). 
+
+MEMORIA NON VOLATILE ( per comodità verrano chiamati dischi)
+    un disco viene visto dal so come una sequezna di tot blocchi, che supporta due op( write e read), viene gestito dal file system 
+
+FILE SYSTEM 
+    il so gestisce i file con il file system, si occupa di determinate operazioni. 
+    CHE COSA È U FILE SYSTEM?
+        permette una astrazione dei file ( e dei disositivi di memorizazzione ) che grantisce l'organizazzione dei file in modo efficiente ( in file e directory). 
+
+FUNZIONAMENTO FILE SYSTEM 
+      il so usa il file sys come intermediario tra il programma utente( che vuole leggere o scrivere un file), e il disco 
+
+FILE  
+    astrazione fondamentale per leggere/salvare informazioni su disco. 
+    ogni file ha una sua struttura interna, con tre tipologie: sequenza non strutturata di byte, sequeza di record di lunghezza fissa, come albero di record.
+    tre tipi di file: 
+        -file e directory normali
+        - file speciali : porte seriali (file speciali a caretteri) o blocchi modellati a dischi ( file speciali a blocchi). 
+   
