@@ -1,0 +1,11 @@
+/* tutor prolog*/
+
+/*problema del cavallo: in una scacchiera, avete un cavallo posizionato in una casella, fare in modo che il cavallo attraversi tutta la scacchiera, usando solo mosse valide,
+  e senza che il cavallo attraversi un acasella già passata.
+  come per le 8 regine, schacchiera = piano cartesiano, e se consideriamo (i,j) come le coordinate del cavallo, notiamo che:
+    ((xi, yi), (xj, yj))  <=>  (|xi-xj| = 2 && |yi-yj| = 1) || (|xi -xj| = 1 && |yi -yj| = 2)*/
+
+
+
+/*procedimento problema*/
+controllo_unicita(_, []).

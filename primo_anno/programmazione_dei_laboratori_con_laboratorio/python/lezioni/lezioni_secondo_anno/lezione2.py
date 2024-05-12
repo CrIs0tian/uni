@@ -1,24 +1,23 @@
+x = input("Immetti un numero ")
 
-x = input('Immetti un numero ')
-
-#x = int(x)
+# x = int(x)
 
 x = float(x)
 
 g = x
 
-print(type(g)) # mostra il tipo di g
+print(type(g))  # mostra il tipo di g
 
-while abs(g*g - x) > 0.00001 :
+while abs(g * g - x) > 0.00001:
     # inizio del testo indentato, inizio blocco
-    print (g)
-    g = 0.5*(g+x/g)
+    print(g)
+    g = 0.5 * (g + x / g)
     # fine del testo indentato, fine blocco
 
-mess = 'la radice quadrata di x è'
+mess = "la radice quadrata di x è"
 
-print( mess, g)
+print(mess, g)
 
 print(type(mess))
 
-print('la radice quadrata di', x, 'è', g)
+print("la radice quadrata di", x, "è", g)

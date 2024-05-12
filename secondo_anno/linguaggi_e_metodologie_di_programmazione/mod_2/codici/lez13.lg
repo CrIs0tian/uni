@@ -7,7 +7,7 @@ bene, ora come strutturo il probelma?
 
 1) strutturazione scacchiera. 
 	possiamo schematizzare la scacchiera come un piano cartesiano, con le regine come coordinate. Quindi se prendiamo due regine con coordinate (Xi, Yi), (Xj, Yj): 
-	Xi != Xj, Yi!= Yj, e non esiste una costante L tc: Xi = Xj + L, Yi = Yj+ L, per tutte le possibili diagonali. 
+	Xi != Xj, Yi != Yj, e non esiste una costante L tc: Xi = Xj + L, Yi = Yj+ L, per tutte le possibili diagonali.
 */
 
 controllo_riga([A,B], [A,C]). 
@@ -16,7 +16,7 @@ controllo_colonna([A,B],[C,A]).
 
 controllo_diagonale([A,B],[C,D]):- 
 	X is A-C, 
-	Y is B-D, 
+	Y is B-D,
 	X =\= Y, 
 	X =\= -Y.
 	
