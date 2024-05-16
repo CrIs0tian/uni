@@ -71,7 +71,7 @@ ricerca_sottostringa("python", a)
 # In[]
 
 
-def ricerca_sottostringa(x, y):  # parametri formali
+def ricerca_sottostringa2(x, y):  # parametri formali
     p, trovato = 0, False
     # modificato tenendo conto che possa aver successo...
     while p <= len(x) - len(y) and not trovato:
@@ -88,7 +88,7 @@ def ricerca_sottostringa(x, y):  # parametri formali
 
 
 a = "gra"
-t = ricerca_sottostringa("programmazione", a)
+t = ricerca_sottostringa2("programmazione", a)
 
 if t < 0:
     print("KO")
@@ -119,7 +119,7 @@ print(fattoriale_generalizzato(2, 6))
 # In[] funzione range
 
 
-def fattoriale_generalizzato(a, b):
+def fattoriale_generalizzato2(a, b):
     m = 1
 
     for p in range(a, b + 1):
@@ -128,7 +128,7 @@ def fattoriale_generalizzato(a, b):
     return m
 
 
-print(fattoriale_generalizzato(2, 6))
+print(fattoriale_generalizzato2(2, 6))
 
 # In[] varianti
 
