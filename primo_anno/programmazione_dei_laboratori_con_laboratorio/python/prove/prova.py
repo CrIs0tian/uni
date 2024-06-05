@@ -1,9 +1,5 @@
-def function (x):
-    x+=1
-    return x 
+d = {}
 
-x = 9 
-x=function(x)
-
-print(x, '\n')
-
+d[1] = 0
+print(d[1])
+print(d[2])
