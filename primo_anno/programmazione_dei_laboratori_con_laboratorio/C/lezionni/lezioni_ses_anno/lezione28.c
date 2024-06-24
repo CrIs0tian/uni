@@ -172,7 +172,7 @@ sequenza insert_sequenza(sequenza v, int p, float x) {
    * Inserisce x in posizione p di v
    * */
 
-  v = append_sequenza(v, 0.0);
+  v = append_sequenza(v, x);
 
   for (int i = v.n - 2; i >= p; i--) {
     v.a[i + 1] = v.a[i];

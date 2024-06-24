@@ -69,7 +69,7 @@ dict dict_del(dict d, char *k) {
    *
    * */
   nodo *p;
-  int lis = h(k, d); /*la lista in cui dovrebbe stare la coppia con chiave k*/
+  int lis = h(k, d); /*la lista in cui dovrebbe stare la coppia con chiave  k */
   d_item e;
 
   p = lista_cerca_k(d.a[lis], k);

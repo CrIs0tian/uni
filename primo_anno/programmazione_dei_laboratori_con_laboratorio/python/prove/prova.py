@@ -1,5 +1,3 @@
-d = {}
-
-d[1] = 0
-print(d[1])
-print(d[2])
+l = [1, 2, 3, 4, 5]
+for i in l:
+    print(i)

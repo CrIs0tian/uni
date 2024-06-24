@@ -121,8 +121,7 @@ nodo *lista_cerca_k(nodo *x, char *k) {
 nodo *lista_in0(nodo *x, d_item e) {
   nodo *n = malloc(sizeof(nodo));
 
-  n->info =
-      e; // un po' delicato, perche'? bisogna cosiderare se ci sono altre chiavi
+  n->info = e; // un po' delicato, perche'? bisogna cosiderare se ci sono altre chiavi
   n->succ = x;
 
   return n;

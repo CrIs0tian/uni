@@ -5,8 +5,9 @@ Created on Mon Nov 13 09:12:46 2023
 @author: Gianluca
 """
 
-def bin_search( a, k ):
-    '''
+
+def bin_search(a, k):
+    """
     Parameters
     ----------
     a : una lista ordinata
@@ -17,29 +18,31 @@ def bin_search( a, k ):
     Un int p
      - Se k è in a restituisce p tale che a[p] == k
      - Se k non è in a restituisce -1
-    '''
-    #n = len(a)
+    """
+    # n = len(a)
     sx, rx = 0, len(a)
     # ricerco k in a[sx:rx]
-    
+
     while rx > sx:
-        cx = (sx+rx)//2
+        cx = (sx + rx) // 2
         if a[cx] == k:
             return cx
         if k < a[cx]:
             rx = cx
         else:
-            sx = cx+1
-            
+            sx = cx + 1
+
     return -1
 
     # Complessità spaziale: O(1)
     # Complessità temporale: O(log n)
-    
+
+
 # In[]
 
-def bin_search2( a, k ):
-    '''
+
+def bin_search2(a, k):
+    """
     Parameters
     ----------
     a : una lista ordinata
@@ -51,29 +54,31 @@ def bin_search2( a, k ):
      - Se k è in a restituisce il massimo p tale
          che a[p] == k
      - Se k non è in a restituisce -1
-    '''
-    #n = len(a)
+    """
+    # n = len(a)
     sx, rx = 0, len(a)
     # ricerco k in a[sx:rx]
-    
+
     while rx > sx:
-        cx = (sx+rx)//2
-        if a[cx] == k and (cx == rx-1 or a[cx+1] != k):
+        cx = (sx + rx) // 2
+        if a[cx] == k and (cx == rx - 1 or a[cx + 1] != k):
             return cx
         if k < a[cx]:
             rx = cx
         else:
-            sx = cx+1
-            
+            sx = cx + 1
+
     return -1
 
     # Complessità spaziale: O(1)
     # Complessità temporale: O(log n)
-    
+
+
 # In[]
 
-def bin_search3( a, k ):
-    '''
+
+def bin_search3(a, k):
+    """
     Parameters
     ----------
     a : una lista ordinata
@@ -83,29 +88,29 @@ def bin_search3( a, k ):
     -------
     la posizione che dovrebbe occupare l'istanza di
     k più a destra in a
-    
+
     ovvero
-    
+
     a[i] <= k per i <= p
     a[i] > k per i > p
-    '''
-    
+    """
+
     # TODO
     lx, rx = 0, len(a)
-    while lx < rx: 
-        cx = (lx+rx)//2
-        if (a[cx]<= k) and (a[cx+1] > k):
+    while lx < rx:
+        cx = (lx + rx) // 2
+        if (a[cx] <= k) and (a[cx + 1] > k):
             return cx
-        if a[cx] > k: 
-            rx=cx 
-        elif a[cx+1]<=k:
-            lx=cx
-    
+        if a[cx] > k:
+            rx = cx
+        elif a[cx + 1] <= k:
+            lx = cx
 
     # Complessità spaziale: O(1)
     # Complessità temporale: O(log n)
-        
-a = [2,4, 6, 7, 7, 10, 10, 10, 10, 14, 16, 17, 20, 23, 23]
+
+
+a = [2, 4, 6, 7, 7, 10, 10, 10, 10, 14, 16, 17, 20, 23, 23]
 
 print(bin_search3(a, 10))
 
@@ -113,15 +118,14 @@ print(bin_search3(a, 10))
 
 # Dizionario
 
-d = {} # dizionario vuoto
-d = { 'python':5, 3:3.14, 2:'programmazione', 'pi':3.14 }
+d = {}  # dizionario vuoto
+d = {"python": 5, 3: 3.14, 2: "programmazione", "pi": 3.14}
 
 print(len(d))
-print(d['pi'])
+print(d["pi"])
 # print(d['PI']) # KeyError
-d['pi'] = 3.1416  # aggiornamento
-print(d['pi'])
-d ['PI'] = d['pi'] # inserimento
-del(d['pi'])
+d["pi"] = 3.1416  # aggiornamento
+print(d["pi"])
+d["PI"] = d["pi"]  # inserimento
+del d["pi"]
 print(d)
-
