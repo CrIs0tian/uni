@@ -1,0 +1,14 @@
+LEZIONE 3 PDJM
+
+TIPI DI DATO E OPERATORI
+    due tipi di dati: primitivi e oggetti, la differenza per adesso è su come sono dichiarati --> int = primitivo, Int = tipo oggetto.
+
+    TIPI PRIMITIVI
+        sono: boolean, char, byte, short, int, long, float, double, dove la compatibilità tra valori è obbligatoria
+
+        possono essere convertiti (se possibile), e in alcuni casi vengono convertiti automaticamente( caso divisione intera: due numeri interi divisi danno un numero approssimato intero).
+
+        PRECEDENZA OPERATORI--> /*% max priorità ( quest'ordine), di base da sinistra a destra
+
+    COSTRUTTI BASE
+

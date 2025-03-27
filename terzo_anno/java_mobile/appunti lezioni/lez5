@@ -1,0 +1,30 @@
+SECONDO PRINCIPIO PROG. OGGETTI: EREDITARIETÀ
+
+    possibilità di 'estendere' le caretteristiche di una classe da una classe 'padre', ma SOLO i metodi e le variabili PUBBLICHE.
+    non si posso ereditare da piu classi.
+
+    seppur non estendiamo nulla noi, in realtà ogni classe eredita la classe object, che offre alcuni metodi:
+
+        this. ..---> per richiamare variabili/metodi nella classe stessa.
+        tostring --> convertire un qualsiasi oggetto in una stringa
+        clone() ---> copia un oggetto, posso decidere cosa copiare
+        equals()---> capire se due oggetti sono uguali
+        hashcode()--->assegna un codice ad un ogggetto(identificativo)
+
+    quando utilizzare ereditarietà:
+        come in database, quando mi rendo conto che alcuni oggetti hanno tante caratteristiche basi comuni
+
+
+POLIMORFISMO
+
+
+    metodi e sati cambiano a seconda di come vengono usati .
+
+
+    POLIMORFISMO DEI METODI: OVERLOAD, OVERRIDE
+        OVERLOAD
+            modificare un metodo dove i tipi di parametri possono cambiare
+        OVERRIDE
+            in una sottoclasse posso dichiarare(modificare) metodi con la stessa 'firma' (nome, parametri, etc.)
+            della superclasse.
+

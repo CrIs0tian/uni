@@ -1,0 +1,22 @@
+TIPI DI CLASSI
+
+
+CLASSI INNERSTATE O INNER
+
+        classi innerstate, ovvero classi 'interne'.
+        classi all'interno di altre classi, dove l'oggetto ha la sua utilità all'interno dell'oggetto esterno
+        non posso chiamare ne this ne super(è 'parte' della classe contenitore), ma ho completa visibilità
+        per instanziare la classe interna, devo instanziarlo su un oggetto contenitore(quindi deve essere già instanziato)
+
+CLASSI ANONIME
+
+
+
+
+MODIFICATORI
+    molte più versioni:
+
+    final---> permette di definire costanti, classi fisse (non estendibili), metodi non modificabili (no overdrive)
+    static---> metodi disponibili per tutte le istanze di una classe, variabili o attributi usaibili da tutti
+    nativ--->
+    abstract--->

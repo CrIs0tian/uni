@@ -1,0 +1,79 @@
+LEZ 4
+
+CLASSI E OGGETTI
+    classe = astrazione di un gruppo di oggetti con caratteristiche comuni
+
+    oggetto = istanza fisica della classe, stanziata in memoria
+
+    esempio = macchina (classe), opel corsa(oggetto)
+
+
+    public class Punto
+    {
+        public int x;              esempio di classe java
+        public int y;
+    }
+
+    è una classe PUBBLICA, ossia una classe che può essere invocata e usata da tutti, cioè da altre classi o metodi esterni
+
+
+    public static void main----> metodo main (dove viene eseguito il codice)
+
+
+
+METODO
+    [modificatore] tipo_di_ritorno nomed_del_metodo(parametr){corpo_metodo}
+
+    -modificatore = public/static, cambiano le caratteristiche del metodo (modalità accesso, disponibilità di invocazione)
+
+    -tipo di ritorno = primitivo, oggetto, o void
+
+ACCESSO OGGETTO/METODO
+
+    nomeoggetto.metodo(parametri)
+                                                    NOMEOGGETTO DEVE ESSERE ISTANZIATO (new)
+
+    nomeoggetto.variabile
+
+VARIABILI
+
+    dichiarazione uguale a c
+
+    divise in due tipi:
+        -variabili d'istanza : variabili dichiarate nell'oggetto, allocate nella new e deallocate quando elimino l'oggetto
+        -variabili locali : var dichiarate nei metodi, allocati solo quando viene invocato il metodo
+
+
+
+COSTRUTTORE
+    metodo particolare, si chiama come il nome della classe (deve essere preciso)
+
+    non ha un tipo di ritorno
+
+    chiamati automaticamente quando creo un oggetto
+
+    se aggiunto dei parametri, devono essere dichiarati nella new, altrimenti non compila
+
+
+CODIFICA
+    invece di c, dove posso scrivere come variabile un_altro_intero, devo scrivere unAltroIntero
+
+    nome classe deve avere la lettere maiuscola iniziale, la sua istanza lettera minuscola
+
+
+
+
+
+PARADIGMI DELLA PROGRAMMAZIONE AD OGGETTI
+
+
+    ne vedremo tre, incapsulamento, ereditarietà, polimorfismo
+
+
+    INCAPSULAMENTO
+
+        capacità di nascondere le informazioni verso l'esterno (alcune variabili o metodi non devono avere modificati o acceduti da tutti), l'unico modo per accederci è attraverso i metodi che devo garantire la coerenza delle caratteristiche dell'oggetto. Come fare?
+        rendo  privati gli attributi, cosi sonno accessibili solo dai metodi public.
+
+per casa, creare classe data, con attributi privati, creare metodi per controllare che la data sia giusta, e creare un costruttore per creare la data in input, controllata prima per vedere se  è valido.
+
