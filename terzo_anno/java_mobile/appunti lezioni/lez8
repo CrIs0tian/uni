@@ -1,0 +1,45 @@
+INTERFACCIA
+
+    struttura dati che 'espone' solo dei metodi(astratti).
+    vantaggi:
+        -ez aggiornamento di sistemi, da uno piu vecchio a uno piu nuovo ma che hanno gli stessi 'metodi' di elaborazione dati.
+    metodi dichiarati sono public abstract
+    variabili dichiarate public, static e final
+    le interfaccie sono esntensibili
+    anche loro 'giocabili' con i puntatori(casting etc.)
+INTERFACCIA E EREDITARIETÀ MULTIPLA
+    cone le interfaccie posso simulare una sorta di 'ereditarietà multipla', poichè posso estendere piuù interfaccie insieme
+
+ENUMERAZIONI (TIPO SPECIALE)
+    enum:  enumerazione di simboli o valori (tutti dichiarati da subito public, static, final )
+
+
+ECCEZIONI, ERRORI E ASSERZIONI
+    piccola differenza tra errori e eccezzioni: la seconda sono errori 'umani', l'altro invece possibili errori di sistema
+
+    asserzioni invece sono situazioni che devono verificarsi per far si che un pezzo di codice funzioni.
+
+    le eccezioni sono oggetti anche loro
+
+
+
+
+DESIGN PATTERN
+    schema noto per risolvere un problema
+
+
+    ne vediamo uno: implementare un singleton, un oggetto che rimane 'fisso' in memoria, che voglio sia sempre presente dentro la mia applicazione
+
+    come implementarlo?
+
+
+
+
+
+
+
+
+compito per casa:
+
+
+

@@ -1,0 +1,48 @@
+intro su android studio
+
+note importanti:
+
+    -gatto= logcat---> monitora tutti i messaggi che il telefono o l'app inviano sotto forma di tag, da piu grave: (E= error),(W=warning), etc.
+        |
+        |--> nota bene: è consigliabile gestire i messaggi di errore con i tag, in modo da facilitarne la ricerca
+
+    -in nuovo progetto, posso scegliere diversi pattern(li vederemo), versione minima dell'sdk (versione più bassa compatibile)
+
+
+XML = extendable markup language, linguaggio usato da java per tutta la parte gui, immagini, video, etc. koitlin usa un altra cosa
+
+    linguaggio usato per organizzare, strutturare e trasportare meglio le informazioni, ma non per visualizzarle.
+    usa i markup(tag), per rappresentare l'informazione che gli serve.
+    é molto modellabile (puoi creare i tag che vuoi), ma proprio per questo in android hanno creato i loro tag che servono per l'app (da studiare).
+
+    regole di grammatica
+
+        - forma tag
+            <father>  --> tag apertura
+                <child>
+                </child>
+            </father> -->tag chiusura
+
+        -tag case sensitive, e devono iniziare con una lettera e non devono contenere spazi
+    attributi dei tag
+
+        -contenuti denttro il tag, per dare caratteristica all'elemento, devono essere mesi tra gli apici
+    xml schema
+        -rappresenta la semantica dei tag
+
+    namespace
+        -usato per specificare i nomi dei tag che vengono utilizzati, per evitare conflitti
+        -viene specificato nel tag di apertura con un uri, che specifica che schema sta utilizzando
+        namespace ---> android(namespace):nomeElemento
+
+
+java su android
+
+    main activity = metodi, azioni, per la activity principale, ogni activity è una classe java
+    ci sono metodi che vengono specificati negli attributi nel file xml (per esempio: onclick --> attributo per specificare il metodo che verrà avviato quando viene cliccato un icona /bottone)
+
+
+
+
+
+

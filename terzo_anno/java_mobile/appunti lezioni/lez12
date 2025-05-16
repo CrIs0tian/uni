@@ -1,0 +1,5 @@
+IMPLEMENTAZIONE SERVLET
+
+
+    servlet: pacchetti per gestire le richieste server, in questo caso gestiremo le chiamate http.
+

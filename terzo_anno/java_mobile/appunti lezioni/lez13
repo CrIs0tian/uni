@@ -1,0 +1,17 @@
+JAVA: INTERAZIONE CON DATABASE (layer interazione con i dati)
+
+    per implementare la interazione applicazione java/database (layer di accesso/modifica dati) viene usato la jdbc (java database connectivity), api (o librerie), per gestire la interazione tra database/applicazione, che nel nostro caso è aperto in tomcat.
+    In poche parole, apre una connessione trai due applicativi e traduce le richieste sql scritte in java in richieste sql per db, offrendo tutti i comandi di manipolazione dei dati (query, insert, select, etc.)
+
+    per stabilire la connessione trai due ci sono tre metodi:
+
+        -connessione diretta con database (insert database nel codice)
+        -connessione con api nativi
+        -connessione attraverso un web source (network reach) --> utilizzeremo questo , cioè attraverso un mediatore web
+
+    cosa faremo con jdbc? caricare il driver nella libreria, caricare url delnostro database (protocollo, tipo di database, dove è presente, database a cui ci facciamo riferimento [lo schema praticamente], nome utente e password), da qui sfuttiamo le richieste come stringhe.
+    aperta la connessione, possiamo usare lo statement (stringa)per eseguire la query, tradotto poi in dei blocchi di memoria che il nostro drivere inserisce gradualmente in maniera trasparente a noi sviluppatori.
+
+
+
+

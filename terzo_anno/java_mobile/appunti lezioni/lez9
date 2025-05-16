@@ -1,0 +1,41 @@
+COSA VEDREMO OGGI: SERIALIZZAZIONE INFO SU DISCO, COME MOSTRARLO SU TESTO E COME TRRANFSORMARLO IN JSON
+
+SERIALIZAZZIONE
+    la serializazzione sono i concetti base della interazione programma con l'esterno, attraverso io.
+    in c esistono i due file di output e input, giusto? In java esiste la stessa cosa, cioè lo stream di input e di output, e sono due tipi di classi, rispettivamente:
+        -ogetto SCANNER:istanza della classe scanner, che legge file da una tastiera o da un altro file(stream di input)
+        -oggetto SYSTEM.OUT: istanza della classe SYSTEM.OUT, che stampa dati sullo schermo o su un'altro file(stream di output)
+SERIALIZAZZIONE SU FILE
+    in java ci sono due file che possono essere gestiti, file di testo(file contenenti solo caratteri, interpretabili in testi o codici java), o file binari(contenenti numeri, interpretabili in immagini, video etc.).
+        IO CON FILE DI TESTO, OUTPUT
+        si usa il costruttore Printstream per creare un oggetto printstream, che sarà il 'canale tra il codice e il file su cui dobbiamo scrivere
+            NOTA--> con printstream bisogna specificare il tipo di codifica per il testo, in questo caso unicode, se sappiamo che il file è SOLO TESTO, usaimo la classe
+                    printWriter. Oltre a questo System.out è una istanza della classe PrintStream.
+        sintassi per creare uno stream nel file esempio 'esempio.txt' (che si trova nella stessa directory del progetto):
+        String fileOut= 'esempio.txt';
+        coding= 'utf8'
+        PrintStream printStream = new PrintStream(fileOut, coding);
+        Questa costruzione può generare una eccezzione (FileNotFoundException, una eccezione particolare di IOExcpetion), bisogna quindi importare l'eccezione e includere il comando in un try.
+        Da qui sono disponibili tutti i metodi di PrintStream, tra cui print che fa le stesse cose di system.out ma lo scrive in un file invece che in uno schermo.
+        Per salvare e scrivere tutti i dati (che non vengono scritti subito nel file ma vengono tenuti prima nel buffer), usiamo il comando printStream.close();
+        Quando viene 'aperto' un file java parte sempre con un file vuoto, perciò se il file aperto è gia stato scritto, printstream cancella tutto quello che cis tava prima.
+        qualora si voglia scrivere su un file già scritto e non vogliamo cancellare tutto, usiamo all'interno del parametro di PrintStream il costruttore FileOutputStream(nome_file, True) dove True dice che se il file esiste, tutti i dati di output vanno aggiunti alla fine della pagina,. Questo perchè permette di costruire un oggetto identificato come file, che printStream non può fare.
+        IO CON FILE DI TESTO, INPUT
+        si usa o scanner o bufferreader, ma tutti e due devono avere come parametro un oggetto di tipo file, che possiamo costruire con FileReader(String nomeFile).
+        scanner viene utilizzato più per legere valori da tastiera, offrendo un modo per organizzare i file inseriti(parsing), buffereader legge tutto il file senza configurazioni.
+        Buffereader a differenza di scanner può lanciare l'eccezzione FileNOtFOunfException, quindi si fa come in prinstream.
+        metodi disponibili per bufferreader: (questi possono lanciare una eccezzione IOException, non solo FileNotFoundExcpetion)
+            -oggBufferReader.readLine()--> legge una linea del file, se lo richiami legge la riga successiva, restiutisce null se la riga è vuota o se arriva alla fine
+            -oggBufferReader.read()-->legge un carattere del file
+            -oggBufferReader.skip(int n)-->skippa n caratteri
+            -oggBufferReader.close()--> chiude i collegamenti del file dal streaminput.
+        IO CON FILE BINARI, INPUT E OUTPUT
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+APPLICAZIONI WEB INTRODUZIONE SERVER SIDE
+
+    FORMATI DATI PER IL WEB
+
+        due disp. per comunicare usano un protocollo di comunicazione, come tcp, ip, http.
+
+        in questo corso vogliamo far si che il rapporto client/server sia un rapporto di manipolazine dati, non soli di richieste di accesso.
+        sono diversi foramti: html, xml, dtd, xslt(non studieremo), tutti quanti sottoforma di stringa, ma con differenze.
+        html è un linguaggio legato alla formattazione, mentre xml è un linguaggio dove da più libertà nei tag, permettendo anche scambio di dati.
+
+    ARCHITETTURA A TRE LIVELLI DEL WEB
+
+        come impostare il 'mondo' delle comunicazioni di dati nel server, diviso in tre livelli,
+        layer presentazione, layer applicativo, layer dei dati.
+
+        tutti e tre devono essere 'disaccoppiati', cioè devo dividerli in tre livelli separati e distinti.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     *          *
+     //  /*-*/ //
+      ///***///
+        ////
+        / /

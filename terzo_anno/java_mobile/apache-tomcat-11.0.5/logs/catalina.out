@@ -1,0 +1,306 @@
+08-Apr-2025 14:58:26.112 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.5
+08-Apr-2025 14:58:26.118 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 28 2025 15:54:41 UTC
+08-Apr-2025 14:58:26.119 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.5.0
+08-Apr-2025 14:58:26.119 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Apr-2025 14:58:26.119 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.12.8-arch1-1
+08-Apr-2025 14:58:26.119 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Apr-2025 14:58:26.119 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk
+08-Apr-2025 14:58:26.120 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.6+7
+08-Apr-2025 14:58:26.120 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+08-Apr-2025 14:58:26.120 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 14:58:26.120 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 14:58:26.136 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/cris0tian/Scrivania/apache-tomcat-11.0.5/conf/logging.properties
+08-Apr-2025 14:58:26.136 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Apr-2025 14:58:26.136 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Apr-2025 14:58:26.136 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Apr-2025 14:58:26.136 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Apr-2025 14:58:26.137 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Apr-2025 14:58:26.137 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Apr-2025 14:58:26.137 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Apr-2025 14:58:26.137 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Apr-2025 14:58:26.137 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Apr-2025 14:58:26.137 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+08-Apr-2025 14:58:26.137 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 14:58:26.138 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 14:58:26.138 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/cris0tian/Scrivania/apache-tomcat-11.0.5/temp
+08-Apr-2025 14:58:26.140 INFORMAZIONI [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+08-Apr-2025 14:58:26.490 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 14:58:26.517 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.load Server initialization in [619] milliseconds
+08-Apr-2025 14:58:26.568 INFORMAZIONI [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Apr-2025 14:58:26.568 INFORMAZIONI [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.5]
+08-Apr-2025 14:58:26.577 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/docs]
+08-Apr-2025 14:58:26.895 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/docs] has finished in [317] ms
+08-Apr-2025 14:58:26.895 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/ROOT]
+08-Apr-2025 14:58:26.923 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/ROOT] has finished in [27] ms
+08-Apr-2025 14:58:26.923 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/host-manager]
+08-Apr-2025 14:58:26.962 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/host-manager] has finished in [39] ms
+08-Apr-2025 14:58:26.963 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/manager]
+08-Apr-2025 14:58:26.991 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/manager] has finished in [27] ms
+08-Apr-2025 14:58:26.991 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/examples]
+08-Apr-2025 14:58:27.216 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/examples] has finished in [224] ms
+08-Apr-2025 14:58:27.220 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 14:58:27.231 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.start Server startup in [712] milliseconds
+08-Apr-2025 14:58:34.225 INFORMAZIONI [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 14:58:34.231 INFORMAZIONI [Thread-1] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Apr-2025 14:58:34.263 INFORMAZIONI [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 14:58:34.276 INFORMAZIONI [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 14:58:58.919 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.5
+08-Apr-2025 14:58:58.924 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 28 2025 15:54:41 UTC
+08-Apr-2025 14:58:58.924 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.5.0
+08-Apr-2025 14:58:58.925 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Apr-2025 14:58:58.925 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.12.8-arch1-1
+08-Apr-2025 14:58:58.925 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Apr-2025 14:58:58.925 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk
+08-Apr-2025 14:58:58.925 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.6+7
+08-Apr-2025 14:58:58.925 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+08-Apr-2025 14:58:58.925 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 14:58:58.926 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 14:58:58.936 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/cris0tian/Scrivania/apache-tomcat-11.0.5/conf/logging.properties
+08-Apr-2025 14:58:58.936 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Apr-2025 14:58:58.936 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Apr-2025 14:58:58.936 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Apr-2025 14:58:58.936 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Apr-2025 14:58:58.937 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Apr-2025 14:58:58.937 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Apr-2025 14:58:58.937 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Apr-2025 14:58:58.937 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Apr-2025 14:58:58.937 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Apr-2025 14:58:58.937 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+08-Apr-2025 14:58:58.938 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 14:58:58.938 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 14:58:58.938 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/cris0tian/Scrivania/apache-tomcat-11.0.5/temp
+08-Apr-2025 14:58:58.939 INFORMAZIONI [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+08-Apr-2025 14:58:59.256 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 14:58:59.278 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.load Server initialization in [553] milliseconds
+08-Apr-2025 14:58:59.321 INFORMAZIONI [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Apr-2025 14:58:59.321 INFORMAZIONI [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.5]
+08-Apr-2025 14:58:59.330 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/docs]
+08-Apr-2025 14:58:59.613 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/docs] has finished in [283] ms
+08-Apr-2025 14:58:59.613 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/ROOT]
+08-Apr-2025 14:58:59.639 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/ROOT] has finished in [26] ms
+08-Apr-2025 14:58:59.639 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/host-manager]
+08-Apr-2025 14:58:59.673 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/host-manager] has finished in [34] ms
+08-Apr-2025 14:58:59.674 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/manager]
+08-Apr-2025 14:58:59.698 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/manager] has finished in [24] ms
+08-Apr-2025 14:58:59.698 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/examples]
+08-Apr-2025 14:58:59.920 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/examples] has finished in [222] ms
+08-Apr-2025 14:58:59.925 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 14:58:59.937 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.start Server startup in [657] milliseconds
+08-Apr-2025 15:00:29.724 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.5
+08-Apr-2025 15:00:29.729 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 28 2025 15:54:41 UTC
+08-Apr-2025 15:00:29.730 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.5.0
+08-Apr-2025 15:00:29.730 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Apr-2025 15:00:29.730 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.12.8-arch1-1
+08-Apr-2025 15:00:29.730 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Apr-2025 15:00:29.730 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk
+08-Apr-2025 15:00:29.730 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.6+7
+08-Apr-2025 15:00:29.730 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+08-Apr-2025 15:00:29.731 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 15:00:29.731 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 15:00:29.740 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/cris0tian/Scrivania/apache-tomcat-11.0.5/conf/logging.properties
+08-Apr-2025 15:00:29.741 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Apr-2025 15:00:29.741 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Apr-2025 15:00:29.741 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Apr-2025 15:00:29.741 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Apr-2025 15:00:29.741 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Apr-2025 15:00:29.741 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Apr-2025 15:00:29.742 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Apr-2025 15:00:29.742 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Apr-2025 15:00:29.742 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Apr-2025 15:00:29.742 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+08-Apr-2025 15:00:29.742 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 15:00:29.742 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/cris0tian/Scrivania/apache-tomcat-11.0.5
+08-Apr-2025 15:00:29.743 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/cris0tian/Scrivania/apache-tomcat-11.0.5/temp
+08-Apr-2025 15:00:29.744 INFORMAZIONI [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+08-Apr-2025 15:00:30.061 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:00:30.081 GRAVE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1056)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:525)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:953)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:122)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:710)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:733)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:299)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:469)
+	Caused by: java.net.BindException: Indirizzo già in uso
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:344)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:301)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:240)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:195)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1472)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1485)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:633)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:83)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1054)
+		... 11 more
+08-Apr-2025 15:00:30.090 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.load Server initialization in [560] milliseconds
+08-Apr-2025 15:00:30.134 INFORMAZIONI [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Apr-2025 15:00:30.134 INFORMAZIONI [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.5]
+08-Apr-2025 15:00:30.142 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/docs]
+08-Apr-2025 15:00:30.433 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/docs] has finished in [290] ms
+08-Apr-2025 15:00:30.433 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/ROOT]
+08-Apr-2025 15:00:30.462 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/ROOT] has finished in [29] ms
+08-Apr-2025 15:00:30.462 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/host-manager]
+08-Apr-2025 15:00:30.499 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/host-manager] has finished in [37] ms
+08-Apr-2025 15:00:30.500 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/manager]
+08-Apr-2025 15:00:30.523 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/manager] has finished in [23] ms
+08-Apr-2025 15:00:30.524 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/examples]
+08-Apr-2025 15:00:30.749 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/apache-tomcat-11.0.5/webapps/examples] has finished in [225] ms
+08-Apr-2025 15:00:30.754 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.start Server startup in [662] milliseconds
+08-Apr-2025 15:00:30.759 GRAVE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Indirizzo già in uso
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:565)
+		at java.base/sun.nio.ch.Net.bind(Net.java:554)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:532)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:849)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:797)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:342)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:470)
+08-Apr-2025 15:00:30.760 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:00:30.760 INFORMAZIONI [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Apr-2025 15:00:30.783 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:00:30.784 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:02:16.280 INFORMAZIONI [http-nio-8080-exec-2] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x07K0x010x000x07G0x030x030x010xfb;40xb50x800xa10xd70xbc0xff0x190x9b+Bc1B0xde&0xc40xee$lV0xa40xaeU0xb70x9b0xe30x92* ]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:398)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:268)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1748)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+08-Apr-2025 15:02:16.280 INFORMAZIONI [http-nio-8080-exec-1] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+	java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x07K0x010x000x07G0x030x030xb6=0x1bU0x11<0xc3V0x140x890x9f0xcf0x160xd00xcb0xb90x1d0x140x180xd60x8f0xc6Z0x9a0xd40xfbAv0xa6u0xb10xe4 ]. HTTP method names must be tokens
+		at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:398)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:268)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1748)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+08-Apr-2025 15:06:09.237 INFORMAZIONI [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-Apr-2025 15:06:09.238 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:06:09.242 INFORMAZIONI [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Apr-2025 15:06:09.264 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:06:09.276 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:31:07.050 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.5
+08-Apr-2025 15:31:07.057 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 28 2025 15:54:41 UTC
+08-Apr-2025 15:31:07.057 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.5.0
+08-Apr-2025 15:31:07.057 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+08-Apr-2025 15:31:07.058 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.12.8-arch1-1
+08-Apr-2025 15:31:07.058 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Apr-2025 15:31:07.058 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk
+08-Apr-2025 15:31:07.058 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.6+7
+08-Apr-2025 15:31:07.058 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+08-Apr-2025 15:31:07.058 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5
+08-Apr-2025 15:31:07.058 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5
+08-Apr-2025 15:31:07.074 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/conf/logging.properties
+08-Apr-2025 15:31:07.074 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Apr-2025 15:31:07.074 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Apr-2025 15:31:07.074 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+08-Apr-2025 15:31:07.075 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Apr-2025 15:31:07.075 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+08-Apr-2025 15:31:07.075 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Apr-2025 15:31:07.075 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Apr-2025 15:31:07.075 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Apr-2025 15:31:07.075 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Apr-2025 15:31:07.075 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+08-Apr-2025 15:31:07.076 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5
+08-Apr-2025 15:31:07.076 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5
+08-Apr-2025 15:31:07.076 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/temp
+08-Apr-2025 15:31:07.078 INFORMAZIONI [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+08-Apr-2025 15:31:07.415 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:31:07.440 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.load Server initialization in [619] milliseconds
+08-Apr-2025 15:31:07.488 INFORMAZIONI [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Apr-2025 15:31:07.488 INFORMAZIONI [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.5]
+08-Apr-2025 15:31:07.505 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/pappagallo.war]
+08-Apr-2025 15:31:07.827 INFORMAZIONI [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+08-Apr-2025 15:31:07.858 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/pappagallo.war] has finished in [352] ms
+08-Apr-2025 15:31:07.858 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/docs]
+08-Apr-2025 15:31:07.881 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/docs] has finished in [23] ms
+08-Apr-2025 15:31:07.881 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/ROOT]
+08-Apr-2025 15:31:07.899 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/ROOT] has finished in [18] ms
+08-Apr-2025 15:31:07.900 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/host-manager]
+08-Apr-2025 15:31:07.930 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/host-manager] has finished in [30] ms
+08-Apr-2025 15:31:07.930 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/manager]
+08-Apr-2025 15:31:07.951 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/manager] has finished in [21] ms
+08-Apr-2025 15:31:07.952 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/examples]
+08-Apr-2025 15:31:08.163 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/examples] has finished in [212] ms
+08-Apr-2025 15:31:08.167 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:31:08.178 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.start Server startup in [735] milliseconds
+08-Apr-2025 15:33:17.184 INFORMAZIONI [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+08-Apr-2025 15:33:17.185 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:33:17.188 INFORMAZIONI [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+08-Apr-2025 15:33:17.214 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+08-Apr-2025 15:33:17.224 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+09-Apr-2025 18:46:33.113 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/11.0.5
+09-Apr-2025 18:46:33.120 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 28 2025 15:54:41 UTC
+09-Apr-2025 18:46:33.121 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 11.0.5.0
+09-Apr-2025 18:46:33.121 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-Apr-2025 18:46:33.121 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.12.8-arch1-1
+09-Apr-2025 18:46:33.121 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-Apr-2025 18:46:33.121 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-21-openjdk
+09-Apr-2025 18:46:33.121 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.6+7
+09-Apr-2025 18:46:33.122 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Arch Linux
+09-Apr-2025 18:46:33.122 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5
+09-Apr-2025 18:46:33.122 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5
+09-Apr-2025 18:46:33.139 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/conf/logging.properties
+09-Apr-2025 18:46:33.139 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-Apr-2025 18:46:33.139 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-Apr-2025 18:46:33.140 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-Apr-2025 18:46:33.140 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+09-Apr-2025 18:46:33.140 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+09-Apr-2025 18:46:33.140 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+09-Apr-2025 18:46:33.140 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+09-Apr-2025 18:46:33.141 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+09-Apr-2025 18:46:33.141 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+09-Apr-2025 18:46:33.141 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --enable-native-access=ALL-UNNAMED
+09-Apr-2025 18:46:33.141 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5
+09-Apr-2025 18:46:33.141 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5
+09-Apr-2025 18:46:33.141 INFORMAZIONI [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/temp
+09-Apr-2025 18:46:33.143 INFORMAZIONI [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+09-Apr-2025 18:46:33.493 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-Apr-2025 18:46:33.524 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.load Server initialization in [642] milliseconds
+09-Apr-2025 18:46:33.575 INFORMAZIONI [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-Apr-2025 18:46:33.575 INFORMAZIONI [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/11.0.5]
+09-Apr-2025 18:46:33.593 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/pappagallo.war]
+09-Apr-2025 18:46:33.933 INFORMAZIONI [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-Apr-2025 18:46:33.963 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/pappagallo.war] has finished in [370] ms
+09-Apr-2025 18:46:33.964 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/docs]
+09-Apr-2025 18:46:33.988 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/docs] has finished in [24] ms
+09-Apr-2025 18:46:33.988 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/ROOT]
+09-Apr-2025 18:46:34.008 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/ROOT] has finished in [20] ms
+09-Apr-2025 18:46:34.008 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/host-manager]
+09-Apr-2025 18:46:34.040 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/host-manager] has finished in [32] ms
+09-Apr-2025 18:46:34.040 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/manager]
+09-Apr-2025 18:46:34.062 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/manager] has finished in [21] ms
+09-Apr-2025 18:46:34.062 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/examples]
+09-Apr-2025 18:46:34.276 INFORMAZIONI [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/cris0tian/Scrivania/uni/terzo_anno/java_mobile/apache-tomcat-11.0.5/webapps/examples] has finished in [213] ms
+09-Apr-2025 18:46:34.280 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-Apr-2025 18:46:34.291 INFORMAZIONI [main] org.apache.catalina.startup.Catalina.start Server startup in [765] milliseconds
+09-Apr-2025 18:51:16.127 INFORMAZIONI [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+09-Apr-2025 18:51:16.128 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+09-Apr-2025 18:51:16.131 INFORMAZIONI [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-Apr-2025 18:51:16.157 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+09-Apr-2025 18:51:16.166 INFORMAZIONI [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

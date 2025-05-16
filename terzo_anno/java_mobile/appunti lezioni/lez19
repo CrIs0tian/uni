@@ -1,0 +1,6 @@
+GUI
+
+layout inspector: tool per vedere le view e le viewgroup, rispettivamente, l'elemento grafico e il contenitore invisibile di view
+layout: specializzazione di viewgroup, posiziona le view in un modo specifico.
+
+setcontentview: metodo che fa inflating(da file xml activity, viene tradotto in un albero di view in java)

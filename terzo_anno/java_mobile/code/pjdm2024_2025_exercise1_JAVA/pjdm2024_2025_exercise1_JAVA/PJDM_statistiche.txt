@@ -1,0 +1,23 @@
+----------------
+Lista Dipendenti
+----------------
+Dirigente:	matricola=1, nome=Mario, cognome=Rossi, salario=3000, nomeDivisioneControllata=Acquisiti, numeroDiependentiSottoposti=-1
+Programmatore:	matricola=2, nome=Luigi, cognome=Bianchi, salario=1800, linguaggioConosciuto=Python
+AgenteDiVendita:	matricola=3, nome=Paolo, cognome=Verdi, salario=2000, provvigione=0.05, numeroClienti=10
+Programmatore:	matricola=4, nome=Pietro, cognome=Neri, salario=1850, linguaggioConosciuto=Java
+Programmatore:	matricola=5, nome=Matteo, cognome=Marrone, salario=1750, linguaggioConosciuto=Java
+AgenteDiVendita:	matricola=6, nome=Daniele, cognome=Arancioni, salario=2100, provvigione=0.1, numeroClienti=15
+Dirigente:	matricola=1, nome=Danilo, cognome=Gialli, salario=3500, nomeDivisioneControllata=Sviluppo, numeroDiependentiSottoposti=30
+
+----------------
+
+Numero Dipendenti:	7.0
+
+Salario Medio:	2285.7144
+
+Miglior Agente di Vendita:	matricola=6, nome=Daniele, cognome=Arancioni, salario=2100, provvigione=0.1, numeroClienti=15
+
+Linguaggi Conosciuti in azienda:	[Java, Python]
+
+Attenzione: Esistono matricole duplicate!
+EXCEPTION:	Attenzione: Esistono matricole duplicate: caused by	matricola=1, nome=Danilo, cognome=Gialli, salario=3500, nomeDivisioneControllata=Sviluppo, numeroDiependentiSottoposti=30
