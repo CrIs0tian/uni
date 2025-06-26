@@ -1,0 +1,16 @@
+killer(butch).
+married(mia, marsellus).
+dead(zed).
+massage(jake, mia).
+massage(brad, tizio).
+is_good_dancer(brad).
+is_good_dancer(tizio).
+kill(marsellus, X):-
+    massage(X, mia).
+love(mia, Y):-
+    is_good_dancer(Y).
+good_food(salad).
+tasty_food(pizza).
+eat(jules, X):-
+    good_food(X);
+    tasty_food(X).

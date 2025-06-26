@@ -1,0 +1,10 @@
+DATI E VIEW
+come dati e view collaborano
+
+creazione oggetto che fa mediatore tra dati e view, prende dati e genera view(questo perchè non sempre i dati rimangono statici).
+
+ADAPTERVIEW.
+
+cosa fa?
+    -gestisce dati, vengono memorizzati i riferimenti.
+    -

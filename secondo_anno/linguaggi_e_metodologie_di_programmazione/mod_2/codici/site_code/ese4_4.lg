@@ -1,0 +1,28 @@
+%esercizio 4.3 
+second(X, [_,X|_]). 
+%esercizio 4.4
+swap12([X,Y|T], [Y,X|T]). 
+%esercizio 4.5 
+tran(eins,one).
+tran(zwei,two).
+tran(drei,three).
+tran(vier,four).
+tran(fuenf,five).
+tran(sechs,six).
+tran(sieben,seven).
+tran(acht,eight).
+tran(neun,nine).
+
+listtran([],[]). 
+listtran([X|T], [Y|N]):- 
+    tran(X,Y), 
+    listtran(T,N). 
+
+%esercizio 4.6
+
+twice([X], [X,X]). 
+twice([X|T], [X,X|H]):- 
+    twice(T,H). 
+    
+
+

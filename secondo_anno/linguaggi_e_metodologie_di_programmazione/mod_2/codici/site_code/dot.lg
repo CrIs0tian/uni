@@ -1,0 +1,9 @@
+dot([X],[Y],Result):- 
+    Result is X*Y. 
+dot([H|T], [X|Y], Result):- 
+    Acc is H*X, 
+    dot(T,Y, SubResult), 
+    Result is Acc + SubResult. 
+
+
+    

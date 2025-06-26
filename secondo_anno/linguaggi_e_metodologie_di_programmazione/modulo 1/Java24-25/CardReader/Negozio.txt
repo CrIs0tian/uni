@@ -1,0 +1,5 @@
+filetype:negozio
+partita_IVA:0123456789
+sede:Via Tuscolana 0
+merce_venduta:vestiti
+in_attività_dal:2022

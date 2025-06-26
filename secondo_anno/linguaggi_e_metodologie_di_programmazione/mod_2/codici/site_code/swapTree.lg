@@ -1,0 +1,19 @@
+tree(tree(leaf(1),leaf(2)),leaf(4)).
+
+swap(tree(leaf(X), leaf(Y)), tree(leaf(Y), leaf(X))). 
+
+swap(tree(tree(X,Y), leaf(Z)), tree(leaf(Z), T)):- 
+    swap(tree(X,Y), T).
+swap(tree(leaf(X), tree(Y,Z)), tree(T, leaf(X))):- 
+    swap(tree(Y,Z), T).
+swap(tree(tree(X,Y), tree(U,Z)), tree(tree(T), tree(J))):- 
+    swap(tree(U,Z),T), 
+    swap(tree(X,Y), J).
+
+
+    
+
+
+    
+
+

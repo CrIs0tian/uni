@@ -1,0 +1,720 @@
+0PROLOG  appunti presi dal sito 'learn prolog now!'
+
+1.2 SINTASSI DI PROLOG
+    esistono 4 termini fondamentali nel linguaggio prolog: atomi, numeri, variabili, e termini complessi(structures).
+
+    ATOMI:
+        elementi 'base' di prolog, che sono :
+            -parole che contengolo parole in piccolo, numeri o underscore(_)
+            -stringe che possono contenere lettere, caratteri speciali, numeri, spazio, scritti dentro due apici
+            -caratteri speciali, quali --->, @, o :- (alcuni di questi hanno un significato speciale, tipo l'ultimo)
+    NUMERI
+        numeri naturali per lo più, anche se prolog supporta anche i numeri in virgola mobile
+    VARIABILI
+        stringa dove la prima lettere è o una lettera maiuscola(ese: X, Variabile3, Io_sono_batman), oppure l'underscore (_variabile_anonima)
+    TERMINI COMPLESSI
+        termini composta da funtore(che deve essere un atomo), e degli attributi tra parentesi(gli attributi (che possono essere qualsiasi cosa, anche un altro termine complesso), la sua arità è il numero degli attributi e viene specificata nelle documentazioni con \n (n = arità)
+
+
+1.3 ESERCIZI
+
+    1) quale di queste stringhe sono atomi, variabili, o nessuno dei due?
+
+    vINCENT ----> atomo
+    Footmassage ---> Variabile
+    variable23 ----> atomo
+    Variable2000---->variabile
+    big_kahuna_burger---> atomo
+    ’big  kahuna  burger’----> atomo
+    big  kahuna  burger ----> nessuno dei due
+    ’Jules’ ----> atomo
+    _Jules ----> variabile
+    ’_Jules’ ----> atomo
+
+
+
+
+    2) quale di queste stringhe sono atomi, variabili, termini complessi, o nessuno dei due? Se è un termine complesso specifica il funtore e la sua arità.
+
+
+    loves(Vincent,mia)----> termine complesso (funtore = loves, arità = 2)
+    ’loves(Vincent,mia)’ ----> atomo
+    Butch(boxer)---->nessuno di questi
+    boxer(Butch)----> termine complesso (funtore = boxer, arità = 1)
+    and(big(burger),kahuna(burger)) -----> termine complesso (funtore = and, arità = 2)
+    and(big(X),kahuna(X))----> termine complesso (funtore = and, arità = 2)
+    _and(big(X),kahuna(X)) ----> nessuno di essi
+    (Butch  kills  Vincent) ----> nessuno di essi
+    kills(Butch  Vincent)-----> nessuno di essi
+    kills(Butch,Vincent -----> nessuno di essi
+
+
+
+
+    3) quanti fatti, regole, clausole e predicati ci sono nella seguente conoscenza di base? quali sono le teste delle regole, e quali sono i loro goal?
+
+
+    woman(vincent).
+    woman(mia).
+    man(jules).
+    person(X):- man(X); woman(X).
+    loves(X,Y):- father(X,Y).
+    father(Y,Z):- man(Y), son(Z,Y).
+    father(Y,Z):- man(Y), daughter(Z,Y).
+
+
+    num clausole= 7
+    num fatti = 3
+    num regole = 4
+    num predicati = 3
+
+
+
+
+    4)
+
+    rappresenta la segente realtà in prolog:
+
+    -Butch is a killer.
+    -Mia and Marsellus are married.
+    -Zed is dead.
+    -Marsellus kills everyone who gives Mia a footmassage.
+    -Mia loves everyone who is a good dancer.
+    -Jules eats anything that is nutritious or tasty.
+
+
+    codice:
+        killer(butch).
+        married(mia, marsellus).
+        dead(zed).
+        massage(jake, mia).
+        massage(brad, tizio).
+        is_good_dancer(brad).
+        is_good_dancer(tizio).
+        kill(marsellus, X):-
+            massage(X, mia).
+        love(mia, Y):-
+            is_good_dancer(Y).
+        good_food(salad).
+        tasty_food(pizza).
+        eat(jules, X):-
+            good_food(X);
+            tasty_food(X).
+
+
+
+2.1 UNIFICAZIONE
+    due termini (costanti[numeri o variabili], variabili, termini complessi) possono essere UNIFICATI ( NON ASSEGNATI) se e soltanto se:
+
+            1) If term1 and term2 are constants, then term1 and term2 unify if and only if they are the same atom, or the same number.
+            2) If term1 is a variable and term2 is any type of term, then term1 and term2 unify, and term1 is instantiated to term2 . Similarly, if term2 is a variable and term1 is any type of term, then term1 and term2 unify, and term2 is instantiated to term1 . (So if they are both variables, they’re both instantiated to each other,      and we say that they share values.)
+            3) If term1 and term2 are complex terms, then they unify if and only if:
+                They have the same functor and arity, and
+                all their corresponding arguments unify, and
+                the variable instantiations are compatible. (For example, it is not possible to instantiate variable X to mia when unifying one pair of arguments, and to instantiate X to vincent when unifying another pair of arguments .)
+            4) Two terms unify if and only if it follows from the previous three clauses that they unify.
+
+    n.b: -prolog considera due atomi uguali anche se uno di questi due è sotto apici, tra atomi e numeri no invece
+         -quando vengono fatte query o codici del tipo (father(X) = X), dove in un algoritmo unificatore standard verrebbe fermato subito, prolog invece non utilizza subito
+            l'algoritmo di controllo, ma bensi tenta di unificare i due termini, dove se c'è qualcosa che non va fa il cotrollo, è molto più 'ottimista' ma anche più veloce.
+
+2.2 PROOF SEARCH (RICERCA DEL GOAL)
+    come funziona la ricerca del goal in prolog? facciamo un esempio con una conoscenza di base:
+
+        f(a).
+        f(b).
+
+        g(a).
+        g(b).
+
+        h(b).
+
+        k(X) :- f(X), g(X), h(X).
+
+
+    e supponiamo di porre la seguente query:
+        ?- k(Y)
+
+        cosa fa prolog? in step:
+            1) cerca da sopra a sotto la prima clausola che può unificare, che sia un fatto o una regola, in questo caso può essere unificato solo con
+               la testa di k(X)
+            2) dato che è una regola con delle variabili, prolog unifica tutte le varibaili uguali con una variabile nuova (tipo _34G), e avrà comenuovo goal f(_34G), g(_34G), h(_34G)
+            3) ora prolog farà lo stesso passo 1 ,a ma con i fatti come nuovi goal, quindi uno alla vola cercerà (sempre top-bottom) un nuovo fatto o
+               regola da unificare. Se arriva ad un punto morto (in questo caso, lui prendere come primo fatto f(a), e quindi cercerà di unificare gli altri fatti con a, ma si ritroverà alla fine che non trova h(a) da poter unificare), prolog 'torna' indietro alla prima deviazione per tentare una nuova strada (come se fosse uan visita dfs, dove i tentativi di unificazione possono essere rapprentati come un albero di ricerca).
+            4) se si ritrova in una ricerca con il goal, vorrà dire che ha soddisatto le condizioni della query, dopodichè restituirà true e la variabile unificata se richiesta (come in questo caso).
+            5) se noi inviassimo ; come prossima query (cioè di trovare un altra soluzione accettabile), prolog ripartirà dal ramo 'ammissibile', e da lì cercerà un'altra possibile soluzione
+
+2.3 ESERCIZI
+
+
+     Exercise  2.1 Which of the following pairs of terms unify? Where relevant, give the variable instantiations that lead to successful unification.
+
+    bread  =  bread  ---> unify
+    ’Bread’  =  bread ---> not unify
+    ’bread’  =  bread ---> unify
+    Bread  =  bread ---> Bread = bread
+    bread  =  sausage ---> not unify
+    food(bread)  =  bread ---> not unify
+    food(bread)  =  X ---> X = food(bread)
+    food(X)  =  food(bread) ---> X = bread
+    food(bread,X)  =  food(Y,sausage)  ---> Y = bread, X = sausage
+    food(bread,X,beer)  =  food(Y,sausage,X) ----> not unify
+    food(bread,X,beer)  =  food(Y,kahuna_burger) ----> not unify
+    food(X)  =  X ----> not unify
+    meal(food(bread),drink(beer))  =  meal(X,Y) ----> X = food(bread), Y = drink(beer)
+    meal(food(bread),X)  =  meal(X,drink(beer)) ---> not unify
+
+
+
+    Exercise  2.2 We are working with the following knowledge base:
+
+    house_elf(dobby).
+    witch(hermione).
+    witch('McGonagall').
+    witch(rita_skeeter).
+    magic(X):- house_elf(X).
+    magic(X):- wizard(X).
+    magic(X):- witch(X).
+
+
+    Which of the following queries are satisfied? Where relevant, give all the variable instantiations that lead to success.
+
+    ?-  magic(house_elf). ---> false
+    ?-  wizard(harry). ---> false
+    ?-  magic(wizard). --->
+    ?-  magic(’McGonagall’). ---> true
+    ?-  magic(Hermione). Hermione = dobby
+
+    Draw the search tree for the query magic(Hermione).
+
+
+
+
+    Exercise  2.3 Here is a tiny lexicon (that is, information about individual words) and a mini grammar consisting of one syntactic rule (which defines a sentence to be an entity consisting of five words in the following order: a determiner, a noun, a verb, a determiner, a noun).
+
+    word(determiner,a).
+    word(determiner,every).
+    word(noun,criminal).
+    word(noun,'big kahuna burger').
+    word(verb,eats).
+    word(verb,likes).
+
+    sentence(Word1,Word2,Word3,Word4,Word5):-
+    word(determiner,Word1),
+    word(noun,Word2),
+    word(verb,Word3),
+    word(determiner,Word4),
+    word(noun,Word5).
+
+    What query do you have to pose in order to find out which sentences the grammar can generate? List all sentences that this grammar can generate in the order that Prolog will generate them in.
+
+    query = sentence(Word1, Word2, Word3, Word4, Word5)
+
+    esempi di risultati:
+        Word1 = Word4, Word4 = a,
+        Word2 = Word5, Word5 = criminal,
+        Word3 = eats ;
+
+
+        Word1 = Word4, Word4 = a,
+        Word2 = criminal,
+        Word3 = eats,
+        Word5 = 'big kahuna burger' ;
+
+
+        Word1 = a,
+        Word2 = Word5, Word5 = criminal,
+        Word3 = eats,
+        Word4 = every ;
+
+
+
+        Word1 = a,
+        Word2 = criminal,
+        Word3 = eats,
+        Word4 = every,
+        Word5 = 'big kahuna burger' ;
+
+
+        Word1 = Word4, Word4 = a,
+        Word2 = Word5, Word5 = criminal,
+        Word3 = likes ;
+
+
+        Word1 = Word4, Word4 = a,
+        Word2 = criminal,
+        Word3 = likes,
+        Word5 = 'big kahuna burger' ;
+
+
+        Word1 = a,
+        Word2 = Word5, Word5 = criminal,
+        Word3 = likes,
+        Word4 = every ;
+
+
+        Word1 = a,
+        Word2 = criminal,
+        Word3 = likes,
+        Word4 = every,
+        Word5 = 'big kahuna burger' ;
+
+
+        Word1 = Word4, Word4 = a,
+        Word2 = 'big kahuna burger',
+        Word3 = eats,
+        Word5 = criminal ;
+
+
+        Word1 = Word4, Word4 = a,
+        Word2 = Word5, Word5 = 'big kahuna burger',
+        Word3 = eats ;
+
+
+        Word1 = a,
+        Word2 = 'big kahuna burger',
+        Word3 = eats,
+        Word4 = every,
+        Word5 = criminal ;
+
+
+        Word1 = a,
+        Word2 = Word5, Word5 = 'big kahuna burger',
+        Word3 = eats,
+        Word4 = every
+
+
+
+        Exercise  2.4 Here are six Italian words:
+
+        astante , astoria , baratto , cobalto , pistola , statale .
+
+        They are to be arranged, crossword puzzle fashion, in the following grid:
+
+
+
+        The following knowledge base represents a lexicon containing these words:
+
+        word(astante, a,s,t,a,n,t,e).
+        word(astoria, a,s,t,o,r,i,a).
+        word(baratto, b,a,r,a,t,t,o).
+        word(cobalto, c,o,b,a,l,t,o).
+        word(pistola, p,i,s,t,o,l,a).
+        word(statale, s,t,a,t,a,l,e).
+
+        Write a predicate crossword/6 that tells us how to fill in the grid. The first three arguments should be the vertical words from left to right, and the last three arguments the horizontal words from top to bottom.
+
+        codice:
+
+        word(astante, a,s,t,a,n,t,e).
+        word(astoria, a,s,t,o,r,i,a).
+        word(baratto, b,a,r,a,t,t,o).
+        word(cobalto, c,o,b,a,l,t,o).
+        word(pistola, p,i,s,t,o,l,a).
+        word(statale, s,t,a,t,a,l,e).
+
+        crossword(H1, H2, H3, V1, V2, V3):-
+            word(H1, H1c1, H1c2, H1c3, H1c4, H1c5, H1c6, H1c7),
+            word(H2, H2c1, H2c2, H2c3,H2c4, H2c5, H2c6, H2c7),
+            word(H3, H3c1, H3c2, H3c3,H3c4,H3c5,H3c6,H3c7),
+            word(V1, V1c1, H1c2, V1c3, H2c2, V1c5, H3c2, V1c7),
+            word(V2, V2c1, H1c4, V2c3, H2c4, V2c5, H3c4, V2c7),
+            word(V3, V3c1, H1c6, V3c3, H2c6, V3c5, H3c6, V3c7).
+
+        query:
+
+            ?- crossword(H1, H2, H3, V1, V2, V3).
+
+            H1 = V1, V1 = astante,
+            H2 = V2, V2 = baratto,
+            H3 = V3, V3 = statale ;
+
+            H1 = astante,
+            H2 = cobalto,
+            H3 = pistola,
+            V1 = astoria,
+            V2 = baratto,
+            V3 = statale ;
+
+            H1 = astoria,
+            H2 = baratto,
+            H3 = statale,
+            V1 = astante,
+            V2 = cobalto,
+            V3 = pistola.
+
+2.4 SESSIONE PRATICA (CONSIGLI)
+    unificazione:
+        esiste il corrispettivo opposto di = , cioè \=, dove quindi è vero se e solo se, due termini NON si possono unificare, quindi
+            a\=b true,
+            A\=b false,
+            A\=B false.
+    ricerca goal:
+        un modo per debuggare è attivare la modalità trace, prima di una query. questa fa si che vengano registrati ogni query passo passo.
+
+
+
+
+3.1 RICORSIONE
+
+    si tratta di ricorsione predicativa, che a differenza di quella procedurale, si basa principalmente sulla propieta transitiva logica.
+    quando viene creato una regola ricorsiva, bisogna SEMPRE definire due strutture:
+        -predicato base: predicato per 'fermare' la ricorsione
+        -predicato ricorsivo: il predicato contente se stesso nel body, quello che da il via alla ricorsione.
+
+    la ricorsione è molto utile e potente per analizzare strutture dati complesse (come la struttura della discendenza), usato per 'contare' (concetto di successore), o per fare operazioni aritmetiche semplici(esempio addizzione).
+
+3.2  ORDINE DELLE REGOLE, GOAL, E TERMINAZIONE
+    Pur essendo uno strumento dichiarativo molto potente, bisogna sempre ricordarsi dell'aspetto procedurale di prolog(infatti nonè un linguaggio   PURAMENTE logico).
+    infatti due codici che hanno magari due regole messe in ordine pur essendo dichiaratamente uguali, si 'comportano' in modo diverso, addirittura possono generare soluzioni diverse, o non terminare(dove in questo caso, succede quando modifichiamo l'ordine delle regole interne, quindi i goal). Nel sito gli utlimi due esempi sono un chiaro modello di ricorsione sinistra, che è una caratteristica delle grammatiche dove quando si tenta di generare una parola essa ha sempre un carattere non termine alla sua estrema sinistra.
+
+ 3.3 Exercises
+
+    1) 3.1 In the text, we discussed the predicate
+
+    descend(X,Y) :- child(X,Y).
+    descend(X,Y) :- child(X,Z),
+                    descend(Z,Y).
+
+    Suppose we reformulated this predicate as follows:
+
+    descend(X,Y) :- child(X,Y).
+    descend(X,Y) :- descend(X,Z),
+                    descend(Z,Y).
+
+    Would this be problematic?
+
+        risposta: si, potrebbe essere problematico, se volessimo verificare la seguente query: ?- Descend(X,Y) e volessimo generare tutte le soluzioni, questo andrebbe in loop, generando una ricorsione destra.
+
+
+
+    2) Do you know these wooden Russian dolls (Matryoshka dolls) where the smaller ones are contained in bigger ones?
+
+        First, write a knowledge base using the predicate directlyIn/2 which encodes which doll is directly contained in which other doll. Then, define a recursive predicate in/2 , that tells us which doll is (directly or indirectly) contained in which other dolls. For example, the query in(katarina,natasha) should evaluate to true, while in(olga,  katarina) should fail.
+
+        nb: scritta un po male, ho fatto il codice in modo che directlyin(X,Y) significa che X è dentro Y.
+
+        codice:
+
+        directlyin(irina,natasha).
+        directlyin(natasha,olga).
+        directlyin(olga, katarina).
+
+        in(X,Y):- directlyin(X,Y).
+        in(X,Y):- directlyin(X,Z),
+          in(Z,Y).
+
+     3)   Exercise  3.3 We have the following knowledge base:
+
+        directTrain(saarbruecken,dudweiler).
+        directTrain(forbach,saarbruecken).
+        directTrain(freyming,forbach).
+        directTrain(stAvold,freyming).
+        directTrain(fahlquemont,stAvold).
+        directTrain(metz,fahlquemont).
+        directTrain(nancy,metz).
+
+        That is, this knowledge base holds facts about towns it is possible to travel between by taking a direct train. But of course, we can travel further by chaining together direct train journeys. Write a recursive predicate travelFromTo/2 that tells us when we can travel by train between two towns. For example, when given the query
+
+        travelFromTo(nancy,saarbruecken).
+
+        it should reply yes.
+
+        codice:
+
+            directTrain(saarbruecken,dudweiler).
+            directTrain(forbach,saarbruecken).
+            directTrain(freyming,forbach).
+            directTrain(stAvold,freyming).
+            directTrain(fahlquemont,stAvold).
+            directTrain(metz,fahlquemont).
+            directTrain(nancy,metz).
+
+            travelFromTo(X,Y):-
+                directTrain(X,Y).
+            travelFromTo(X,Y):-
+                directTrain(X,Z),
+                travelFromTo(Z,Y).
+
+        4)  Exercise  3.4 Define a predicate greater_than/2 that takes two numerals in the notation that we introduced in the text (that is, 0, succ(0), succ(succ(0)), and so                         on) as arguments and decides whether the first one is greater than the second one. For example:
+
+            ?- greater_than(succ(succ(succ(0))),succ(0)).
+
+            yes
+            ?- greater_than(succ(succ(0)),succ(succ(succ(0)))).
+
+            no
+
+            codice:
+
+            greater_than(succ(X), 0).
+
+            greater_than(succ(X), succ(Y)):-
+                greater_than(X,Y).
+
+            (molto rozzo, ma funziona)
+
+        5)
+            Exercise  3.5 Binary trees are trees where all internal nodes have exactly two children. The smallest binary trees consist of only one leaf node. We will represent leaf nodes as leaf(Label) . For instance, leaf(3) and leaf(7) are leaf nodes, and therefore small binary trees. Given two binary trees B1 and B2 we can combine them into one binary tree using the functor tree/2 as follows: tree(B1,B2) . So, from the leaves leaf(1) and leaf(2) we can build the binary tree tree(leaf(1),leaf(2)) . And from the binary trees tree(leaf(1),leaf(2)) and leaf(4) we can build the binary tree tree(tree(leaf(1),  leaf(2)),leaf(4)) .
+
+            Now, define a predicate swap/2 , which produces the mirror image of the binary tree that is its first argument. For example:
+
+            ?- swap(tree(tree(leaf(1), leaf(2)), leaf(4)),T).
+
+            T = tree(leaf(4), tree(leaf(2), leaf(1))).
+            yes
+
+            codice:
+                tree(tree(leaf(1),leaf(2)),leaf(4)).
+
+                swap(tree(leaf(X), leaf(Y)), tree(leaf(Y), leaf(X))).
+
+                swap(tree(tree(X,Y), leaf(Z)), tree(leaf(Z), T)):-
+                    swap(tree(X,Y), T).
+                swap(tree(leaf(X), tree(Y,Z)), tree(T, leaf(X))):-
+                    swap(tree(Y,Z), T).
+                swap(tree(tree(X,Y), tree(U,Z)), tree(tree(T), tree(J))):-
+                    swap(tree(U,Z),T),
+                    swap(tree(X,Y), J).
+
+4.1 LISTE
+    struttura dati classica, composta da [elemento1, elemento2, etc], dove gli elementi possono essere liste, atomi, costanti, variabili, termini complessi(fatti).
+    Prolog può 'leggere' una lista con questa struttura: [H|T], dove H è il primo elemento della lista e T il resto, e sono tutti e due variabili.
+    Questa annotazione è molto flessibile, dato che possiamo unificare la lista in modi diversi, basta che ci sia un | in mezzo, e che il secondo sia sempre una varibile; per fare degli esempi:
+        -[X,Y|T] : unifico i primi due elementi della lista in X e Y e T nel resto
+        -[X,_|F]: unifico il primo e il secondo elemento, dove il secondo non importa cosa unifica(variabile anonima),
+        -[_,_,[X|_]|_]: tutti gli elementi tranne il terzo elemento che è una testa(e vogliamo unificare la testa): possiamo quindi approfondire la unificazione anche negli elementi di una lista se sono anc'essi elementi.
+    l'unico caso in cui non possiamo unificare la lista come [H|T] è nel caso della lista vuota [], infatti anche con una lista tipo [elemento], [H|T] sarà H= elemento, T=[].
+
+4.2 APPARTENNZA
+    concetto gia capito e visto a lezione, implementare una conoscenza, tale che possa rispondere alla seguente query:
+        appartiene(a, [...]), dove a un elemento qualsiasi e [..], una lista.
+
+
+    codice
+    appartiene(X, [X|T]).
+    appartiene(X, [H|T]):- appartiene(X, T).
+
+    codice piu pulito (variabili anonime).
+
+    appartiene(X, [X|_]).
+    appartiene(X, [_|T]):- appartiene(X, T).
+
+
+4.3 scavando ricorsivamente le liste
+    un altro esempio di ricorsione su liste è il predica a2b\2, dove prende due liste come attributi e se domandanto, risponde si se e solo se le due liste sono liste di a nel primo e b nel secondo, e hanno hanno la stessa lunghezza.
+
+    Per risolverso sfruttiamo sempre il concetto di caso base e passo induttivo,
+    caso base : tutti e due sono liste vuote o con un elemento [a], [b].
+    caso induttivo: se hanno come primo elemento a e b, e sia cosi per il resto.
+    Qua il concetto di [H|T] ritorna molto utile, infatti.
+
+    codice:
+        a2b([], []).
+        a2b([a|Ta], [b|Tb]) :- a2b(Ta, Tb).
+
+    essendo a e b costanti, controlla anche che le liste siano effettivamente liste di [a,a,a,...,a] e [b,b,b,....,b]
+
+    Questo predicato è utile non solo come controllo ma anche come tecnica per copiare, scrivere su liste etc.; se provassimo a chiedere infatti:
+
+    a2b([a,a,a,a], X).
+
+    query:
+        X = [b,b,b,b]
+
+4.4 esercizi
+
+    1) How does Prolog respond to the following queries?
+
+    [a,b,c,d]  =  [a,[b,c,d]]. no
+    [a,b,c,d]  =  [a|[b,c,d]]. yes
+    [a,b,c,d]  =  [a,b,[c,d]]. no
+    [a,b,c,d]  =  [a,b|[c,d]]. yes
+    [a,b,c,d]  =  [a,b,c,[d]]. no
+    [a,b,c,d]  =  [a,b,c|[d]]. yes
+    [a,b,c,d]  =  [a,b,c,d,[]]. no
+    [a,b,c,d]  =  [a,b,c,d|[]]. yes
+    []  =  _. yes
+    []  =  [_]. no
+    []  =  [_|[]]. no
+
+
+    2)  Which of the following are syntactically correct lists? If the representation is correct, how many elements does the list have?
+
+    [1|[2,3,4]]  correct, 4
+    [1,2,3|[]] correct , 4
+    [1|2,3,4] not correct
+    [1|[2|[3|[4]]]] correct 2
+    [1,2,3,4|[]] correct 4
+    [[]|[]] correct 0
+    [[1,2]|4] correct 2
+    [[1,2],[3,4]|[5,6,7] correct 3
+
+    3) Write a predicate second(X,List) which checks whether X is the second element of List .
+
+        second\2
+
+        second(X, [_,X|_]).
+    4) Write a predicate swap12(List1,List2) which checks whether List1 is identical to List2 , except that the first two elements are exchanged.
+
+        swap12\2
+
+    5)  Suppose we are given a knowledge base with the following facts:
+
+            tran(eins,one).
+            tran(zwei,two).
+            tran(drei,three).
+            tran(vier,four).
+            tran(fuenf,five).
+            tran(sechs,six).
+            tran(sieben,seven).
+            tran(acht,eight).
+            tran(neun,nine).
+
+
+         Write a predicate listtran(G,E) which translates a list of German number words to the corresponding list of English number words. For example:
+
+            listtran([eins,neun,zwei],X).
+
+        should give:
+
+            X = [one,nine,two].
+
+        Your program should also work in the other direction. For example, if you give it the query
+
+            ?- listtran(X,[one,seven,six,two]).
+
+        it should return:
+
+            X = [eins,sieben,sechs,zwei].
+
+        codice:
+
+            listtran([],[]).
+            listtran([X|T], [Y|N]):-
+                tran(X,Y),
+                listtran(T,N).
+
+    6)Write a predicate twice(In,Out) whose left argument is a list, and whose right argument is a list consisting of every element in the left list written twice. For    example, the query
+
+        twice([a,4,buggle],X).
+
+    should return
+
+        X = [a,a,4,4,buggle,buggle]).
+
+    And the query
+
+        ?- twice([1,2,1,1],X).
+
+    should return
+
+        X = [1,1,2,2,1,1,1,1].
+
+    codice:
+
+        twice([X], [X,X]).
+        twice([X|T], [X,X|H]):-
+            twice(T,H).
+
+
+5 ARITMETICA IN PROLOG E I SUOI UTILIZZI
+    annotazione aritmetica standard ----> 4+2 = 6, 8/3 = 2 .....
+    annotaione aritmetica prolog ------> 6 is 4+2, 2 is 8/3
+
+    in prolog, il termine is attua due operazioni, una di matrice aritmetica ( il termine destro, +-*/, anche loro termini complessi, fa la operazione), mentre il termine is, fa l'unificazione, in questo caso con 8 oppure può farlo con una variabile.
+    Possiamo usare variabili per unificare le operazioni, e possiamo metterli anche nel termine destro, basta che poi venga unificata con un numero prima della operazione, questo perchè prolog impone che a desra ci siano solo costanti o variabili già unificate prima della query.
+
+    modi per sfruttare l'aritmetica: contare la lunghezza di una lista.
+
+        primo codice :
+
+        len([],0).
+        len([_|T],N) :- len(T,X), N is X+1.
+
+        secondo codice, con l'uso di un accumulatore:
+
+        accLen([_|T],A,L) :-  Anew is A+1, accLen(T,Anew,L).
+        accLen([],A,A).
+
+    un altro strumento aritmetico sono i confronti, anche qui con una sintattica diversa rispetto a quella aritmetica
+
+        Arithmetic examples 	Prolog Notation
+        x < y 	X  <  Y.
+        x ≤ y 	X  =<  Y.
+        x = y 	X  =:=  Y.
+        x ⁄ = y 	X  =\=  Y.
+        x ≥ y 	X  >=  Y
+        x > y 	X  >  Y
+
+    a differenza delle operazioni aritmetiche, questi predicati vogliono che tutti e edue i termini non siano delle varabili da unificare nel momento della query.
+
+    codice che applica questi predicati, torvare il massimo in una lista
+
+                accMax([H|T],A,Max) :-
+                    H > A,
+                    accMax(T,H,Max).
+
+                accMax([H|T],A,Max) :-
+                    H =< A,
+                    accMax(T,A,Max).
+
+                accMax([],A,A).
+
+            funziona, ma se ci fossero numeri non negativi, questo codice non risponderebbe bene, dato che per farlo partire dovremmo mettere un numero base (cioè 0).
+            Questo problema è facilmente risolvibile con una leggera modifica.
+
+               max(List,Max) :-
+                    List = [H|_],  -----> uso come primo numero, la testa della lista
+                    accMax(List,H,Max).
+
+
+5 esercizi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
