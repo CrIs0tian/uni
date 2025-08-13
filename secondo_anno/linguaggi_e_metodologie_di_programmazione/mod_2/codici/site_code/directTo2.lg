@@ -1,0 +1,48 @@
+:-[my_append].
+
+
+
+directTrain(saarbruecken,dudweiler).
+directTrain(dudweiler,saarbruecken).
+directTrain(forbach,saarbruecken).
+directTrain(saarbruecken,forbach).
+directTrain(freyming,forbach).
+directTrain(forbach,freyming).
+directTrain(stAvold,freyming).
+directTrain(freyming,stAvold).
+directTrain(fahlquemont,stAvold).
+directTrain(stAvold,fahlquemont).
+directTrain(metz,fahlquemont).
+directTrain(fahlquemont,metz).
+directTrain(nancy,metz).
+directTrain(metz,nancy).
+
+
+
+route(X,Y,Z):- 
+    travel(X,Y,[X],P),
+    reverse(P, Z).
+     
+travel(X,X,Acc, Acc).
+    
+travel(X,Y,Acc,Z):- 
+    directTrain(X,P), 
+    \+ member(P,Acc),
+    travel(P,Y,[P|Acc],Z). 
+     
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+

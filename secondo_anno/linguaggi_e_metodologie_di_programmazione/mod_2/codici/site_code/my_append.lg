@@ -1,0 +1,4 @@
+my_append([], List2, List2).
+my_append([X|Xs], List2, [X|Zs]) :-
+    my_append(Xs, List2, Zs).
+

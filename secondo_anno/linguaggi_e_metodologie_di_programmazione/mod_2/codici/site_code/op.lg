@@ -1,0 +1,6 @@
+:- op(500, xfy, somma). 
+somma(X,Y):- 
+    Z is X + Y. 
+4 somma 3.
+
+

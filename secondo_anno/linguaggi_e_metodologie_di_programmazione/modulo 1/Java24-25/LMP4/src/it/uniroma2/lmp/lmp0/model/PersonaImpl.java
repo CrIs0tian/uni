@@ -12,6 +12,7 @@ public class PersonaImpl implements Persona {
      * @param cognome <-- i param sono dei tag
      * @param codiceFiscale
      */
+    
     public PersonaImpl(String nome, String cognome, String codiceFiscale) {
         this.nome = nome;
         this.cognome = cognome;

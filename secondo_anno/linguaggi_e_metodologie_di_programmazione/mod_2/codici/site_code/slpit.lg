@@ -1,0 +1,12 @@
+my_append([], List2, List2).
+my_append([X|Xs], List2, [X|Zs]) :-
+    my_append(Xs, List2, Zs).
+split([],[],[]):-!.
+split([H|T],P,N):-
+    H >= 0,
+    !,
+    my_append([H],Z,P),
+    split(T,Z,N).
+split([H|T], P,N):- 
+    my_append([H],Z,N),
+    split(T, P,Z ).

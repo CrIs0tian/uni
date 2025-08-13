@@ -1,0 +1,10 @@
+accMin([], A, A). 
+accMin([H|T], A, Min):- 
+    H < A, 
+    accMin(T, H, Min). 
+accMin([H|T], A, Min):- 
+    H>=A, 
+    accMin(T, A, Min). 
+
+accMinimo([H|T], Min):- 
+    accMin([H|T], H, Min).

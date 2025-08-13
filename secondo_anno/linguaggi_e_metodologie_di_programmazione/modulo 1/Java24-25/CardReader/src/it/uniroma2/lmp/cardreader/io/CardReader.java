@@ -10,14 +10,14 @@ import java.util.Map;
 
 public class CardReader { //riutilizzabile
 
-	public static Map<String, String> readCard(File card) throws CardReadingException{
+	public static Map<String, String> readCard(File card) throws CardReadingException {
 		Map<String, String> map = new HashMap<>(); //diamond "<>"
 		BufferedReader bf; //si possono incapsulare tutti insieme (con il FileReader)
 		
 		try {
 			FileReader fr = new FileReader(card); //implementa un Reader
 			bf = new BufferedReader(fr);
-			
+										
 		} catch (FileNotFoundException e) {
 			throw new CardReadingException(e, card);
 		}
@@ -37,13 +37,14 @@ public class CardReader { //riutilizzabile
 			
 		}
 
-		finally {try {
+		finally { try {
 			bf.close();
 		} catch (IOException e) {
 			throw new CardReadingException(e, card);
-		}}
+		} }
 		
 		return map;
 	}
 
 }
+

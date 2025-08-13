@@ -1,17 +1,17 @@
-e(a,b).
-e(b,c). 
-e(c,d).
-e(a,e). 
-e(e,f).
-e(f,c). 
-e(f,k). 
 
-path(X,Y):-
- 	e(X,Y). 
- 	
+edge(a, b).
+edge(a, c).
+edge(b, c).
+edge(k, f).
+edge(c, d).
+edge(d, e).
 
-path(X,Y):-
-	e(X,Z),
-	path(Z,Y). 
+% DFS
+pathDFS(X, Y, [X|Y]) :-
+    edge(X, Y).
+pathDFS(X, Y, [X|P_Z_Y]) :-
+    edge(X, Z),
+    pathDFS(Z, Y, P_Z_Y).
+
 
 

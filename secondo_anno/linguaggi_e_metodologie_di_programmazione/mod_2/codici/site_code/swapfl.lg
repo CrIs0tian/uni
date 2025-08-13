@@ -1,0 +1,3 @@
+swaplfInd([H],[T],T,H).
+swaplfInd([H|T],[H|R],X,Y):- swaplfInd(T,R, X,Y).
+swaplf([H|T],[R|V]):- swaplfInd(T,V, H,R).

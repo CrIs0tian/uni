@@ -1,0 +1,7 @@
+include('newAppend.lg').
+doubleApp(L,L).
+doubleApp([H|T],Acc):- 
+    append(Acc,[H], R), 
+    doubleApp(T,R). 
+doubled(L):- 
+    doubleApp(L,[]). 

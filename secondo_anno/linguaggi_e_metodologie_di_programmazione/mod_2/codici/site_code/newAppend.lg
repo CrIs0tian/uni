@@ -1,0 +1,8 @@
+accRev([],A,A).
+accRev([H|T],A,R):- accRev(T,[H|A],R).
+rev(L,R):- accRev(L,[], R).
+appendRev([],A,A).
+appendRev([H|T],A, R):- appendRev(T,[H|A], R). 
+append(L,R, Res):- 
+    rev(L,X),
+    appendRev(X,R, Res). 

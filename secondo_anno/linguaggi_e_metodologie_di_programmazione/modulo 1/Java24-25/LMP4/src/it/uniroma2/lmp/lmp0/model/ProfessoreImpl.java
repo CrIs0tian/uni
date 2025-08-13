@@ -17,6 +17,7 @@ public class ProfessoreImpl extends PersonaImpl implements Professore {
      * @param cattedra
      */
 
+    
     public ProfessoreImpl(String nome, String cognome, String codiceFiscale, String cattedra) {
         super(nome, cognome, codiceFiscale);
         this.cattedra = cattedra; //e' cio' che fa setCattedra

@@ -1,0 +1,6 @@
+nationality(english). 
+nationality(japanese). 
+nationality(spanish). 
+house(red, nationality(english)). 
+house(green).
+house(blue).

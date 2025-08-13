@@ -1,0 +1,16 @@
+accRev([],A,A).
+accRev([H|T],A,R):- accRev(T,[H|A],R).
+rev(L,R):- accRev(L,[], R).
+appendRev([],A,A).
+appendRev([H|T],A, R):- appendRev(T,[H|A], R). 
+append(L,R, Res):- 
+    rev(L,X),
+    appendRev(X,R, Res). 
+len([],0). 
+len([_|T], N):- len(T, X), N is X+1.
+topTail([H|T], OutList):- 
+    len([H|T],N), 
+    N >= 2, 
+    append(OutList, [_], T).
+
+

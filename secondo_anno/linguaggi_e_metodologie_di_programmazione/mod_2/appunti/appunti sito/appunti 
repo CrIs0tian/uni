@@ -671,6 +671,356 @@
 
 5 esercizi
 
+    1)  Exercise  5.1 How does Prolog respond to the following queries?
+
+    X  =  3*4.    yes
+    X  is  3*4.   true
+    4  is  X.     errore
+    X  =  Y.        true
+    3  is  1+2.    true
+    3  is  +(1,2).  true
+    3  is  X+2.   error
+    X  is  1+2.     X = 3
+    1+2  is  1+2.   false
+    is(X,+(1,2)).   X = 3
+    3+2  =  +(3,2).  true
+    *(7,5)  =  7*5.    true
+    *(7,+(3,2))  =  7*(3+2).   true
+    *(7,(3+2))  =  7*(3+2).   true
+    7*3+2  =  *(7,+(3,2)).  true
+    *(7,(3+2))  =  7*(+(3,2)).  false
+
+
+    2)
+
+    Exercise  5.2
+
+        Define a 2-place predicate increment that holds only when its second argument is an integer one larger than its first argument. For example, increment(4,5) should hold, but increment(4,6) should not.
+        Define a 3-place predicate sum that holds only when its third argument is the sum of the first two arguments. For example, sum(4,5,9) should hold, but sum(4,6,12) should not.
+
+
+        predicato increment\2
+
+            increment(X,Y):-
+                Y is X+1.
+
+        predicato sum\3
+
+            sum(X,Y,Z):-
+                Z is X+Y.
+
+    3)
+        Exercise 5.3
+        Write a predicate addone/2 whose first argument is a list of integers, and whose second argument is the list of integers obtained by adding 1 to each integer in the first list. For example, the query
+
+        ?- addone([1,2,7,2],X).
+
+        should give
+
+        X = [2,3,8,3].
+
+
+
+
+
+6 APPROFONDIMENTO LISTE
+
+    6.1 APPEND
+
+        vogliamo creare un predicato di tre attributi, dovei il primo è una lista, la seconda un'altra lista o un atomo, e la terza è la prima lista concatenata con il secondo attributo.
+
+        codice
+
+        append([],L,L).   ----->   caso base, la seconda lista appesa ad una lista vuota
+        append([H|T],L2,[H|L3]) :- append(T,L2,L3). ------> caso induttivo, la seconda lista è costituita dalla testa con H, ed L3 è T concatenato con L2.
+
+        albero di decisione
+
+            append([a, b, c], [1, 2, 3], _G518)  ---> _G518 = [a|_G857]
+            append([b, c], [1, 2, 3], _G587)------> G_587 = [b|G_590]  e cosi via
+            append([c], [1, 2, 3], _G590)
+            append([], [1, 2, 3], _G593)
+            append([], [1, 2, 3], [1, 2, 3])
+            append([c], [1, 2, 3], [c, 1, 2, 3])
+            append([b, c], [1, 2, 3], [b, c, 1, 2, 3])
+            append([a, b, c], [1, 2, 3], [a, b, c, 1, 2, 3])
+
+
+            come sempre : unificazione (ass variabili) e costruzione.
+
+        resoconto: codice molto utile e versatile (si possono creare i predicati prefisso e suffisso), ma risulta inefficente in alcuni casi, dato che si susseguiscono una serie di concatenazioni fino ad arrivare al risultato finale, il chè può portare ad spendere molte risorse nella ricerca del goal.
+
+    6.2 invertire una lista
+
+        creazione del predicato reverse con un tecnica 'ingenua' e una tecninca 'efficiente' (usabile anche nell'append)
+
+
+        primo modo: usando l'append
+
+        codice
+            naiverev([],[]).  caso base--> lista vuota, lista invertita = vuota
+            naiverev([H|T],R):- naiverev(T,RevT), append(RevT,[H],R). ----> lista [H|T], lista invertita = lista inverita con H append finale
+
+        inefficiente, richiama ricorsivamente append.
+
+        secondo modo: usando l'accumulatore
+
+        codice
+            accRev([H|T],A,R):- accRev(T,[H|A],R). dove con la lista [H|T], mettiamo H in testa nell'accumulatore, e richiamo accRev con i nuovi parametri
+            accRev([],A,A). finiti gli elementi della lista, eguagliamo l'accumulatore per il risultato
+
+        codice per inizializzare
+            rev (L,R):- accRev(L,[], R).
+
+    esercizi 6
+
+        6.1 Let’s call a list doubled if it is made of two consecutive blocks of elements that are exactly the same. For example, [a,b,c,a,b,c] is doubled (it’s made up of [a,b,c] followed by [a,b,c] ) and so is [foo,gubble,foo,gubble] . On the other hand, [foo,gubble,foo] is not doubled. Write a predicate doubled(List) which succeeds when List is a doubled list.
+
+        codice NewAppend
+        accRev([H|T],A,R):- accRev(T,[H|A],R).
+        accRev([],A,A).
+        rev(L,R):- accRev(L,[], R).
+
+        appendRev([H|T],A, R):- appendRev(T,[H|A], R).
+        appendRev([],A,A).
+        append(L,R, Res):-
+            rev(L,X),
+            appendRev(X,R, Res).
+
+        codice
+
+        include('newAppend.lg').
+        doubleApp(L,L).
+        doubleApp([H|T],Acc):-
+            append(Acc,[H], R),
+            doubleApp(T,R).
+        doubled(L):-
+            doubleApp(L,[]).
+
+         6.2 A palindrome is a word or phrase that spells the same forwards and backwards. For example, ‘rotator’, ‘eve’, and ‘nurses run’ are all palindromes. Write a predicate palindrome(List) , which checks whether List is a palindrome. For example, to the queries:
+
+         ?- palindrome([r,o,t,a,t,o,r]).
+
+            and
+
+            ?- palindrome([n,u,r,s,e,s,r,u,n]).
+
+            Prolog should respond yes
+
+         codice
+            accRev([H|T],A,R):- accRev(T,[H|A],R).
+            accRev([],A,A).
+            rev(L,R):- accRev(L,[], R).
+
+            palindrome(L):- rev(L,L).
+
+
+         6.3 Write a predicate toptail(InList,OutList) which says no if InList is a list containing fewer than 2 elements, and which deletes the first and the last elements of InList and returns the result as OutList , when InList is a list containing at least 2 elements. For example:
+
+            toptail([a],T).
+            no
+
+            toptail([a,b],T).
+            T=[]
+
+            toptail([a,b,c],T).
+            T=[b]
+
+        codice
+
+            append([],L,L).
+            append([H|T],L2,[H|L3]) :- append(T,L2,L3).
+            len([],0).
+            len([_|T], N):- len(T, X), N is X+1.
+
+            topTail([H|T], OutList):-
+                len([H|T],N),
+                N >= 2,
+                append(OutList,[_], T).
+
+
+        6.4 Write a predicate last(List,X) which is true only when List is a list that contains at least one element and X is the last element of that list. Do this in two different ways:
+
+        Define last/2 using the predicate rev/2 discussed in the text.
+        Define last/2 using recursion.
+
+
+        codice usando rev
+
+            accRev([H|T],A,R):- accRev(T,[H|A],R).
+            accRev([],A,A).
+            rev(L,R):- accRev(L,[], R).
+            last(List,X):- rev(List, [X|_]).
+
+        codice usando l'induzione
+
+            last([X],X).
+            last([_|T],X):- last(T,X).
+
+        6.5 Write a predicate swapfl(List1,List2) which checks whether List1 is identical to List2 , except that the first and last elements are exchanged.
+            Here’s where append/3 could come in useful again, but it is also possible to write a recursive definition without appealing to append/3 (or any other) predicates.
+
+            codice
+
+                swaplfInd([H],[T],T,H).
+                swaplfInd([H|T],[H|R],X,Y):- swaplfInd(T,R, X,Y).
+                swaplf([H|T],[R|V]):- swaplfInd(T,V, H,R).
+
+
+
+9 APPROFONDIMENTO DEI TERMINI
+
+    elenco di tutti i termini di comparazione, ognuno con una funzione precisa.
+
+    =  ----> unificazione, true se può unificare i due argomenti.
+    \= ----> cotrario di unificazione
+
+    == -----> termine di ugualità, true se i due argomenti sono uguali (cioè sono lo stesso termine, anche se sono in 'forme' diverse, come i termini aritmetici)
+    \== ----> contrario di ==
+
+    =:= ugualità aritmetica, vero se i due termini rappresentano lo stesso intero
+    =\= contrario di =:=
+
+    why? uno per capire bene la differenza tra loro, ma anche perchè == svela un'altro argomento, quello della struttura dei termini.
+    Con il predicato == infatti, capiamo come prolog confronti due termini in maniera diversa rispetto a noi, dove noi vediamo a e 'a' come termini diversi, lui li vede nella stessa maniera, oppure come 2+3 e +(2,3); infatti prolog usa questo trucchetto per mostrarci un codice più user firendly.
+
+    Un'altro esempio è la lista, che noi vediamo come [1,2,3,4], mentre prolog internamente la vede come il seguente predicato.
+
+    .(1,.(2,.(3,.(4,[])))), strutturato nel seguente modo
+
+    -una lista vuota è rappresentata con []
+    -una lista non vuota è rappresentata con la struttura .(elem, lista), con elem la testa, e lista un altra lista (vuota[], o non vuota .(c,...)).
+
+    9.3 esaminare i termini e la loro struttura
+
+        possiamo usare i seguenti predicati per capire che tipi di termini sono gli argomenti.
+
+            atom/1 	 Is the argument an atom?
+            integer/1 	Is the argument an integer?
+            float/1 	Is the argument a floating point number?
+            number/1 	Is the argument an integer or a floating point number?
+            atomic/1 	Is the argument a constant? (cioè un atomo o un numero)
+            var/1 	Is the argument an uninstantiated variable? (variabile non unificata)
+            nonvar/1 	Is the argument an instantiated variable or another term that is not an un instantiated variable? (qualsiasi altro termine)
+
+        struttura dei termini
+
+            FUNCTOR
+            usiamo un predicato costruito per dare informazioni sui termini complessi, come il loro funtore e la loro arità.
+
+                ?- functor(f(a,b),F,A).
+                A = 2
+                F = f
+                yes
+
+                possiamo anche dare come risultato il termine complesso.
+
+                ?- functor(X, f, 3).
+                   f(_, _, _).
+
+            COMPLEXTERM
+            con questo predicato possiamo costruire una regola per verificare quando un argomento è un termine complesso.
+
+                complexterm(X):-
+                    nonvar(X),
+                    functor(X,_,A),
+                    A > 0.
+
+            ARG
+            questo , prendendo un numero N e un termine complesso, e X, unifica X con il N.esimo argomento del termine complesso
+
+                ?- arg(2,loves(vincent,mia),X).
+                X = mia
+                yes
+
+            UNIV
+            due argomenti, un termine complesso e una lista, dvoe la testa è il funtore del termine complesso e la coda sono gli argomenti
+            ?- '=..'(loves(vincent,mia),X)
+
+                Prolog will respond
+
+            X = [loves,vincent,mia]
+
+            è anche un operatore
+
+                loves(vincent,mia) =.. X -----> =..(loves(vincent,mia),X) ---->  X = [loves,vincent,mia]
+
+                X =.. [loves, vincent, mia] -----> =..(X, [loves, vincent, mia]) -----> X = loves(vincent,mia)
+
+            STRINGHE
+
+            prolog vede le stringhe come una lista di lettere codificati in ascii.
+            esistono tre predicati per codificarli in come lo vede prolog.
+
+                atom_codes\2
+
+                ?- atom_codes(vicky,X).
+                X = [118, 105, 99, 107, 121]
+                yes
+
+                number_codes\2
+
+                string_codes\2
+
+                ?- string_codes(X, [118, 105, 99, 107, 121])
+                X = "vicky"
+
+        9.4 operatori
+
+
+            possiamo definire gli operatori
+
+            struttura
+
+                :- op(num, xf, name_op (o [op1, op2, op3])).
+
+                num = numero compreso tra 0 1200 che definisce la priorità, più alta più priorità ha.
+                xf definisce la struttura dell'operatore (se è unario,o binario) e la priorità degli argomenti
+                    xfx = op che prende due argomenti e hanno la stessa priorità
+                    xfy = op 2 parametri e x ha meno priorità rispetto a op , y meno o uguale priorità rispetto a op.
+                    xf, yf
+                    fx, fy
+
+                da qui poi bisognerebbe definire come funziona l'operatore, come aggiungiere regole o predicati.
+
+       altri comandi
+
+        display\1 -----> scrive su schermo l'argomento, in forma prolog-naturale(quindi op li vediamo come predicati)
+        write\1 ------> display\ ma lo scrive in forma user-friendly
+        tab(X)----> stampa x spazi
+        nl---> \n di prolog
+
+10 CUT E NEGAZIONE
+    in una regola , se viene messo un !, questo durante la ricerca del goal, fa si che tutte le scelte fatte da prolog rimangano fisse, eliminando altri possibili alberi di ricerca.
+    Per capire, se viene unificato una variabile, questa mantiene il valore unificato, senza esplorare altri rami unificandolo con altri valori.
+
+    predicato fail, fallisce il goal un ramo di ricerca (o la ricerca intera) se è presente come goal.
+    con la combinazione ! possiamo creare una negazione, che ci permette di usarla come negazione logica, ma anche come modo per non esplorare un ramo indesiderato.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
